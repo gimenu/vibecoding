@@ -125,6 +125,7 @@ book:
         - sections/16-4-computer-use-agents.qmd
     - part: "17장 모델과 도구는 어디로 가는가"
       chapters:
+        - sections/17-0-introduction.qmd
         - sections/17-1-future-model-landscape.qmd
         - sections/17-2-operating-open-weight-models.qmd
         - sections/17-3-future-development-environments.qmd

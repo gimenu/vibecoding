@@ -1,8 +1,10 @@
+<!-- authoritative-lang: ko -->
+
 # §17.1 프런티어·특화·온디바이스 모델 {.unnumbered}
 
 병원과 공동 연구를 하는 연구실의 대학원생 B가 코딩 에이전트와 함께 실험 기록 정리용 웹 도구를 만든다고 하자. 화면과 데이터베이스 코드는 클라우드에서 돌아가는 최신 모델에 맡기면 금방 나온다. 그런데 도구가 다룰 기록 일부에 환자 정보가 섞여 있어서, 이 기록은 연구실 밖 서버로 보낼 수 없다. B는 한 프로젝트 안에서 "어떤 모델을 쓸까"라는 질문에 두 번 답해야 한다. (이 사례는 설명을 위해 만든 가상 사례다. 이 섹션 전체에서 이어서 쓴다.)
 
-17장은 네 가지 질문을 다룬다. 앞으로 어떤 모델을 쓰게 될지, 그 모델을 누가 운영할지, 어떤 개발 환경에서 쓸지, 선택을 바꿔도 지금의 도구와 작업 자산을 계속 쓸 수 있을지다. 이 섹션은 첫 질문을 맡는다. 제목의 프런티어 모델, 특화 모델, 온디바이스 모델은 모델을 이야기할 때 흔히 쓰는 구분이다. 이 섹션은 먼저 이 구분이 무엇을 기준으로 나뉘는지 따져 보고, 각 갈래에서 지금 일어나는 변화를 1차 자료로 정리한다. 서술은 2026년 10월 기준이다.
+이 섹션은 앞으로 어떤 모델을 쓰게 될지 살펴본다. 제목의 프런티어 모델, 특화 모델, 온디바이스 모델은 모델을 이야기할 때 흔히 쓰는 구분이다. 이 섹션은 먼저 이 구분이 무엇을 기준으로 나뉘는지 따져 보고, 각 갈래에서 지금 일어나는 변화를 1차 자료로 정리한다. 서술은 2026년 10월 기준이다.
 
 작업별로 모델을 고르는 실전 방법은 §5.1, 오픈 웨이트와 클로즈드 웨이트 모델의 비교는 §5.3, 작업마다 모델을 나눠 보내는 라우팅은 §5.4에서 다룬다. 이 섹션은 그 선택지 자체가 어떻게 바뀌고 있는지에 초점을 둔다.
 
@@ -12,12 +14,12 @@
 
 기준이 둘이므로 한 모델이 여러 갈래에 걸치는 일이 흔하다.
 
-- Google의 MedGemma는 의료에 맞춘 특화 모델이면서, 4B와 27B 크기로 가중치가 공개되어 직접 내려받아 실행할 수 있다 ([Sellergren 외, 2025](https://arxiv.org/abs/2507.05201)).
-- OpenAI의 gpt-oss-20b는 범용 모델이지만 16GB 메모리에서 실행할 수 있는 크기로 공개되었다 ([OpenAI, 2025a](https://openai.com/index/introducing-gpt-oss/)).
-- 한 모델 계열 안에서도 크기가 크게 갈린다. Alibaba의 Qwen3 계열은 0.6B부터 235B까지의 모델을 함께 내놓았고, 대표 모델의 지식을 활용해 작은 모델을 만드는 데 드는 계산을 크게 줄였다고 밝혔다 ([Yang 외, 2025](https://arxiv.org/abs/2505.09388)).
-- 프런티어 모델을 만드는 회사가 특화 모델을 내기도 한다. OpenAI의 GPT-5-Codex는 GPT-5를 코딩 에이전트 작업에 맞게 더 다듬은 모델이다 ([OpenAI, 2025b](https://openai.com/index/introducing-upgrades-to-codex/)).
+- Google의 MedGemma는 의료에 맞춘 특화 모델이면서, 4B와 27B 크기로 가중치가 공개되어 직접 내려받아 실행할 수 있다 [\[1\]](#ref-17-1-1).
+- OpenAI의 gpt-oss-20b는 범용 모델이지만 16GB 메모리에서 실행할 수 있는 크기로 공개되었다 [\[2\]](#ref-17-1-2).
+- 한 모델 계열 안에서도 크기가 크게 갈린다. Alibaba의 Qwen3 계열은 0.6B부터 235B까지의 모델을 함께 내놓았고, 대표 모델의 지식을 활용해 작은 모델을 만드는 데 드는 계산을 크게 줄였다고 밝혔다 [\[3\]](#ref-17-1-3).
+- 프런티어 모델을 만드는 회사가 특화 모델을 내기도 한다. OpenAI의 GPT-5-Codex는 GPT-5를 코딩 에이전트 작업에 맞게 더 다듬은 모델이다 [\[4\]](#ref-17-1-4).
 
-프런티어라는 기준은 시간에 따라 움직이기도 한다. Stanford HAI의 AI Index 2025에 따르면, MMLU 벤치마크에서 60%를 넘긴 가장 작은 모델은 2022년 PaLM(540B)에서 2024년 Microsoft의 Phi-3-mini(3.8B)로 바뀌었다. 같은 문턱을 넘는 데 필요한 크기가 142분의 1로 줄었다 ([Stanford HAI, 2025](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts)). Phi-3 기술 보고서는 이 모델이 휴대폰에 배포할 수 있을 만큼 작다고 밝혔다 ([Abdin 외, 2024](https://arxiv.org/abs/2404.14219)). 몇 년 전 프런티어 수준이던 성능이 지금은 기기 안에서 나온다.
+프런티어라는 기준은 시간에 따라 움직이기도 한다. Stanford HAI의 AI Index 2025에 따르면, MMLU 벤치마크에서 60%를 넘긴 가장 작은 모델은 2022년 PaLM(540B)에서 2024년 Microsoft의 Phi-3-mini(3.8B)로 바뀌었다. 같은 문턱을 넘는 데 필요한 크기가 142분의 1로 줄었다 [\[5\]](#ref-17-1-5). Phi-3 기술 보고서는 이 모델이 휴대폰에 배포할 수 있을 만큼 작다고 밝혔다 [\[6\]](#ref-17-1-6). 몇 년 전 프런티어 수준이던 성능이 지금은 기기 안에서 나온다.
 
 따라서 세 이름은 서로 겹치지 않는 분류로 보기보다, 두 축 위의 위치를 부르는 이름으로 쓰는 편이 정확하다. 이 섹션도 세 이름을 그대로 쓰되, 두 축 위에 놓고 읽는다. 하나는 범용성(범용 ↔ 특화)이고, 다른 하나는 실행 위치(제공사의 클라우드, 직접 운영하는 서버, 사용자의 기기)다. 아래 표는 이 섹션에서 다루는 모델을 두 축에 배치한 것이다. 빈칸은 그런 모델이 없다는 뜻이 아니라, 이 섹션에서 1차 자료로 확인한 예가 없다는 뜻이다.
 
@@ -32,13 +34,13 @@ DeepSeek-V4처럼 같은 모델을 가중치로 공개하면서 개발사 API로
 
 ### 학습 비용
 
-프런티어 모델을 만드는 데 드는 비용은 계속 오르고 있다. Epoch AI의 Cottier 외(2024)는 가장 많은 계산을 들여 학습한 모델들의 학습 비용이 2016년 이후 해마다 약 2.4배(90% 신뢰구간 2.0~2.9배)씩 늘었다고 추정했다 ([Cottier 외, 2024](https://arxiv.org/abs/2405.21015)). 이런 비용을 감당할 수 있는 조직은 많지 않다.
+프런티어 모델을 만드는 데 드는 비용은 계속 오르고 있다. Epoch AI의 Cottier 외(2024)는 가장 많은 계산을 들여 학습한 모델들의 학습 비용이 2016년 이후 해마다 약 2.4배(90% 신뢰구간 2.0~2.9배)씩 늘었다고 추정했다 [\[7\]](#ref-17-1-7). 이런 비용을 감당할 수 있는 조직은 많지 않다.
 
-반대 방향의 사례도 있다. DeepSeek-V3 기술 보고서는 최종 학습에 H800 GPU 278.8만 시간이 들었고, GPU 한 시간 임대료를 2달러로 가정하면 557.6만 달러라고 밝혔다. 같은 보고서는 이 금액이 공식 학습만 포함하며, 구조, 알고리즘, 데이터에 관한 사전 연구와 시험 실험 비용은 빠져 있다고 적었다 ([DeepSeek-AI, 2024](https://arxiv.org/abs/2412.19437)). 따라서 앞의 추정과 같은 기준으로 비교할 수는 없다. 두 자료를 함께 읽으면, 정점에 서는 비용은 오르고 있지만 정점 바로 아래에 도달하는 방법은 효율이 높아지고 있다고 볼 수 있다.
+반대 방향의 사례도 있다. DeepSeek-V3 기술 보고서는 최종 학습에 H800 GPU 278.8만 시간이 들었고, GPU 한 시간 임대료를 2달러로 가정하면 557.6만 달러라고 밝혔다. 같은 보고서는 이 금액이 공식 학습만 포함하며, 구조, 알고리즘, 데이터에 관한 사전 연구와 시험 실험 비용은 빠져 있다고 적었다 [\[8\]](#ref-17-1-8). 따라서 앞의 추정과 같은 기준으로 비교할 수는 없다. 두 자료를 함께 읽으면, 정점에 서는 비용은 오르고 있지만 정점 바로 아래에 도달하는 방법은 효율이 높아지고 있다고 볼 수 있다.
 
 ### 경쟁 지형
 
-AI Index 2026은 Arena 리더보드 점수로 모델 사이의 거리를 쟀다 ([Stanford HAI, 2026](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf)). Arena는 사람들이 두 모델의 답을 나란히 보고 더 나은 쪽을 고른 결과로 점수를 매긴다. 보고서가 정리한 내용은 세 가지다.
+AI Index 2026은 Arena 리더보드 점수로 모델 사이의 거리를 쟀다 [\[9\]](#ref-17-1-9). Arena는 사람들이 두 모델의 답을 나란히 보고 더 나은 쪽을 고른 결과로 점수를 매긴다. 보고서가 정리한 내용은 세 가지다.
 
 - **상위 모델이 서로 가까워졌다.** 상위 4개 회사의 모델이 25점 안에 모여 있다. 보고서는 최상위 모델끼리 구별하기 어려워질수록 비용, 응답 속도, 안정성 같은 요소가 채택에 더 중요해질 수 있다고 봤다.
 - **미국과 중국 모델의 차이는 사실상 사라졌다.** 2025년 2월 DeepSeek-R1은 미국 최상위 모델보다 5점(0.4%) 낮았다. 2026년 3월 기준 중국 최상위 모델(Dola-Seed-2.0 Preview, 1,464점)은 미국 최상위 모델보다 39점(2.7%) 낮다.
@@ -52,11 +54,11 @@ Arena 점수는 사람의 선호를 모은 값이라 특정 작업의 정확도�
 
 | 모델 | 개발사 | 공개 | 전체 / 활성 파라미터 | 공개 형태 | 개발사가 밝힌 특징 |
 |---|---|---|---|---|---|
-| Qwen3.5-397B-A17B | Alibaba | 2026.02 | 397B / 17B (모델명 기준) | 가중치 공개 | 선형 어텐션과 희소 MoE 구조로 배포 비용을 줄였고, 1조 파라미터가 넘는 Qwen3-Max와 비슷한 성능 ([Alibaba Group, 2026](https://www.alibabagroup.com/en-US/document-1960233590314762240)) |
-| GLM-5 | Zhipu AI (Z.ai) | 2026.02 | 초록에 미기재 | 가중치 공개 | 기술 보고서 제목이 "GLM-5: from Vibe Coding to Agentic Engineering". 실제 코딩 작업과 처음부터 끝까지 이어지는 소프트웨어 공학 과제를 목표로 함 ([GLM-5 Team, 2026](https://arxiv.org/abs/2602.15763)) |
-| DeepSeek-V4-Pro, V4-Flash | DeepSeek | 2026.04 (미리보기) | 1.6T / 49B, 284B / 13B | 가중치 공개 | 100만 토큰 컨텍스트가 기본. 공개 모델 가운데 에이전트 코딩 성능 최상위 ([DeepSeek, 2026](https://api-docs.deepseek.com/news/news260424/)) |
-| Kimi K2.5 | Moonshot AI | 2026.02 (기술 보고서) | 1T / 32B | 가중치 공개 (수정 MIT 라이선스) | INT4 양자화를 전제로 만든 상태로 공개. 여러 에이전트가 나눠 맡아 함께 실행하는 swarm 방식 ([Moonshot AI, 2026](https://huggingface.co/moonshotai/Kimi-K2.5); [Kimi Team, 2026](https://arxiv.org/abs/2602.02276)) |
-| gpt-oss-120b, gpt-oss-20b | OpenAI | 2025.08 | 117B / 5.1B, 21B / 3.6B | 가중치 공개 (Apache 2.0) | 120b는 80GB, 20b는 16GB 메모리에서 실행. 각각 o4-mini, o3-mini와 비슷한 성능 ([OpenAI, 2025a](https://openai.com/index/introducing-gpt-oss/)) |
+| Qwen3.5-397B-A17B | Alibaba | 2026.02 | 397B / 17B (모델명 기준) | 가중치 공개 | 선형 어텐션과 희소 MoE 구조로 배포 비용을 줄였고, 1조 파라미터가 넘는 Qwen3-Max와 비슷한 성능 [\[10\]](#ref-17-1-10) |
+| GLM-5 | Zhipu AI (Z.ai) | 2026.02 | 초록에 미기재 | 가중치 공개 | 기술 보고서 제목이 "GLM-5: from Vibe Coding to Agentic Engineering". 실제 코딩 작업과 처음부터 끝까지 이어지는 소프트웨어 공학 과제를 목표로 함 [\[11\]](#ref-17-1-11) |
+| DeepSeek-V4-Pro, V4-Flash | DeepSeek | 2026.04 (미리보기) | 1.6T / 49B, 284B / 13B | 가중치 공개 | 100만 토큰 컨텍스트가 기본. 공개 모델 가운데 에이전트 코딩 성능 최상위 [\[12\]](#ref-17-1-12) |
+| Kimi K2.5 | Moonshot AI | 2026.02 (기술 보고서) | 1T / 32B | 가중치 공개 (수정 MIT 라이선스) | INT4 양자화를 전제로 만든 상태로 공개. 여러 에이전트가 나눠 맡아 함께 실행하는 swarm 방식 [\[13\]](#ref-17-1-13)[\[14\]](#ref-17-1-14) |
+| gpt-oss-120b, gpt-oss-20b | OpenAI | 2025.08 | 117B / 5.1B, 21B / 3.6B | 가중치 공개 (Apache 2.0) | 120b는 80GB, 20b는 16GB 메모리에서 실행. 각각 o4-mini, o3-mini와 비슷한 성능 [\[2\]](#ref-17-1-2) |
 
 이 표에서 세 가지를 읽을 수 있다.
 
@@ -72,25 +74,25 @@ Arena 점수는 사람의 선호를 모은 값이라 특정 작업의 정확도�
 
 ### 범용 모델이 따라잡은 사례
 
-2023년 Bloomberg는 금융 데이터 3,630억 토큰과 일반 데이터 3,450억 토큰을 섞어 50B 규모의 BloombergGPT를 처음부터 학습했다 ([Wu 외, 2023](https://arxiv.org/abs/2303.17564)). 분야 모델을 만드는 방법 가운데 자원이 가장 많이 드는 쪽이다.
+2023년 Bloomberg는 금융 데이터 3,630억 토큰과 일반 데이터 3,450억 토큰을 섞어 50B 규모의 BloombergGPT를 처음부터 학습했다 [\[15\]](#ref-17-1-15). 분야 모델을 만드는 방법 가운데 자원이 가장 많이 드는 쪽이다.
 
-같은 해 Microsoft 연구진은 다른 길을 보였다. 별도 학습 없이 GPT-4에 프롬프트 기법(Medprompt)만 더해, 의사 면허 시험형 문제 모음인 MedQA에서 처음으로 90%를 넘겼다. Med-PaLM 2 같은 의료 특화 모델을 큰 차이로 앞섰고, 기존 최고 특화 모델보다 MedQA 오류율을 27% 줄였다 ([Nori 외, 2023](https://arxiv.org/abs/2311.16452)). 논문 제목이 질문 자체다. "범용 기반 모델이 특화 튜닝을 이길 수 있는가(Can Generalist Foundation Models Outcompete Special-Purpose Tuning?)".
+같은 해 Microsoft 연구진은 다른 길을 보였다. 별도 학습 없이 GPT-4에 프롬프트 기법(Medprompt)만 더해, 의사 면허 시험형 문제 모음인 MedQA에서 처음으로 90%를 넘겼다. Med-PaLM 2 같은 의료 특화 모델을 큰 차이로 앞섰고, 기존 최고 특화 모델보다 MedQA 오류율을 27% 줄였다 [\[16\]](#ref-17-1-16). 논문 제목이 질문 자체다. "범용 기반 모델이 특화 튜닝을 이길 수 있는가(Can Generalist Foundation Models Outcompete Special-Purpose Tuning?)".
 
-2025년 Microsoft 연구진은 시험 문제에서 진단 과정으로 범위를 넓혔다. NEJM의 임상병리 증례 304개를 단계별 진단 과정으로 바꾼 벤치마크를 만들었다. 의사나 AI는 짧은 증례 요약에서 출발해 필요한 정보와 검사를 하나씩 요청해야 한다. 의료용으로 따로 학습하지 않은 범용 모델 o3에, 여러 의사가 함께 판단하는 과정을 흉내 내는 조율 장치(MAI-DxO)를 더하자 진단 정확도가 80%에 이르렀다. 일반 의사 평균 20%의 4배다. 진단 비용은 의사보다 20%, 조율 장치 없이 o3만 쓴 경우보다 70% 낮았다. 연구진은 같은 효과가 OpenAI, Gemini, Claude, Grok, DeepSeek, Llama 계열 모델에서도 나타났다고 밝혔다 ([Nori 외, 2025](https://arxiv.org/abs/2506.22405)).
+2025년 Microsoft 연구진은 시험 문제에서 진단 과정으로 범위를 넓혔다. NEJM의 임상병리 증례 304개를 단계별 진단 과정으로 바꾼 벤치마크를 만들었다. 의사나 AI는 짧은 증례 요약에서 출발해 필요한 정보와 검사를 하나씩 요청해야 한다. 의료용으로 따로 학습하지 않은 범용 모델 o3에, 여러 의사가 함께 판단하는 과정을 흉내 내는 조율 장치(MAI-DxO)를 더하자 진단 정확도가 80%에 이르렀다. 일반 의사 평균 20%의 4배다. 진단 비용은 의사보다 20%, 조율 장치 없이 o3만 쓴 경우보다 70% 낮았다. 연구진은 같은 효과가 OpenAI, Gemini, Claude, Grok, DeepSeek, Llama 계열 모델에서도 나타났다고 밝혔다 [\[17\]](#ref-17-1-17).
 
 두 결과는 "그 분야를 잘하려면 분야 데이터로 별도 모델을 학습해야 한다"는 전제를 약하게 만든다. 특히 2025년의 결과는 분야 데이터로 학습하지 않고 범용 모델을 쓰는 방식만 설계해도 분야 성능을 끌어올릴 수 있음을 보여 준다. 다만 MedQA는 시험 문제이고, 진단 벤치마크도 공개 증례로 만든 시험 환경이라 실제 진료 업무와 같지 않다.
 
 ### 그래도 필요하다는 근거
 
-**좁고 반복되는 작업에서는 작은 미세조정 모델이 앞설 수 있다.** Predibase 연구진은 10개 기반 모델을 31개 작업에 LoRA로 미세조정해 310개 모델을 만들었다. 4비트로 양자화한 LoRA 모델은 평균적으로 기반 모델보다 34점, GPT-4보다 10점 높았다. 같은 보고서는 미세조정한 Mistral-7B 모델 25개를 A100 GPU 한 장에서 함께 서빙했다 ([Zhao 외, 2024](https://arxiv.org/abs/2405.00732)). LoRA(Low-Rank Adaptation)는 기반 모델은 그대로 두고 작은 추가 가중치(어댑터)만 학습하는 방법이다. 비교 대상이 2024년 당시의 GPT-4라는 점은 감안해야 한다.
+**좁고 반복되는 작업에서는 작은 미세조정 모델이 앞설 수 있다.** Predibase 연구진은 10개 기반 모델을 31개 작업에 LoRA로 미세조정해 310개 모델을 만들었다. 4비트로 양자화한 LoRA 모델은 평균적으로 기반 모델보다 34점, GPT-4보다 10점 높았다. 같은 보고서는 미세조정한 Mistral-7B 모델 25개를 A100 GPU 한 장에서 함께 서빙했다 [\[18\]](#ref-17-1-18). LoRA(Low-Rank Adaptation)는 기반 모델은 그대로 두고 작은 추가 가중치(어댑터)만 학습하는 방법이다. 비교 대상이 2024년 당시의 GPT-4라는 점은 감안해야 한다.
 
-**에이전트 시스템의 비용 구조가 작은 모델에 유리하다는 주장이 있다.** NVIDIA Research와 Georgia Tech 연구진은 입장문에서, 에이전트는 소수의 정해진 작업을 반복하는 경우가 많으므로 그 작업에는 작은 언어 모델(SLM)이 충분하고 더 경제적이라고 주장했다. 일반적인 대화 능력이 필요한 부분에만 큰 모델을 섞어 쓰는 구성을 제안했다 ([Belcak 외, 2025](https://arxiv.org/abs/2506.02153)). 저자들 스스로 이 글을 입장 표명으로 소개한다.
+**에이전트 시스템의 비용 구조가 작은 모델에 유리하다는 주장이 있다.** NVIDIA Research와 Georgia Tech 연구진은 입장문에서, 에이전트는 소수의 정해진 작업을 반복하는 경우가 많으므로 그 작업에는 작은 언어 모델(SLM)이 충분하고 더 경제적이라고 주장했다. 일반적인 대화 능력이 필요한 부분에만 큰 모델을 섞어 쓰는 구성을 제안했다 [\[19\]](#ref-17-1-19). 저자들 스스로 이 글을 입장 표명으로 소개한다.
 
-**시장 전망도 같은 방향이다.** Gartner는 2027년까지 기업이 작고 작업에 특화된 AI 모델을 범용 대형 언어 모델보다 최소 3배 더 많이 쓰게 될 것이라고 전망했다 ([Gartner, 2025](https://www.gartner.com/en/newsroom/press-releases/2025-04-09-gartner-predicts-by-2027-organizations-will-use-small-task-specific-ai-models-three-times-more-than-general-purpose-large-language-models)). 전망치이고 방법론은 공개되지 않았다.
+**시장 전망도 같은 방향이다.** Gartner는 2027년까지 기업이 작고 작업에 특화된 AI 모델을 범용 대형 언어 모델보다 최소 3배 더 많이 쓰게 될 것이라고 전망했다 [\[20\]](#ref-17-1-20). 전망치이고 방법론은 공개되지 않았다.
 
-**분야 고유의 데이터 형식이 있다.** Google의 MedGemma는 Gemma 3를 기반으로 한 4B, 27B 모델이다. 기술 보고서에 따르면 비슷한 크기의 생성 모델보다 의료 과제에서 크게 앞서고, 작업 전용 모델에 근접한다. 전자의무기록 정보 검색에 맞춰 추가로 미세조정하자 오류가 50% 줄었다. 의료 영상을 위해서는 의료용 영상 인코더(MedSigLIP)를 따로 만들었다 ([Sellergren 외, 2025](https://arxiv.org/abs/2507.05201)).
+**분야 고유의 데이터 형식이 있다.** Google의 MedGemma는 Gemma 3를 기반으로 한 4B, 27B 모델이다. 기술 보고서에 따르면 비슷한 크기의 생성 모델보다 의료 과제에서 크게 앞서고, 작업 전용 모델에 근접한다. 전자의무기록 정보 검색에 맞춰 추가로 미세조정하자 오류가 50% 줄었다. 의료 영상을 위해서는 의료용 영상 인코더(MedSigLIP)를 따로 만들었다 [\[1\]](#ref-17-1-1).
 
-**프런티어 회사와 도구 회사도 특화 모델을 만든다.** OpenAI는 GPT-5-Codex를 코딩 에이전트 작업에만 쓰도록 권한다. 사내 사용 기록에서 토큰을 가장 적게 쓰는 하위 10% 요청에서는 GPT-5보다 토큰을 93.7% 덜 썼고, 가장 많이 쓰는 상위 10%에서는 두 배쯤 오래 추론하고 코드를 고치고 테스트했다 ([OpenAI, 2025b](https://openai.com/index/introducing-upgrades-to-codex/)). 코딩 도구 회사 Cursor는 소프트웨어 공학 작업에 강화학습으로 맞춘 MoE 모델 Composer를 내놓고, 비슷한 모델보다 생성 속도가 4배 빠르다고 밝혔다. 이 수치는 Cursor 자체 벤치마크 기준이다 ([Cursor, 2025](https://cursor.com/blog/composer)). Mistral AI의 Codestral도 코드 생성 작업을 위해 만든 공개 가중치 모델이다 ([Mistral AI, 2024](https://mistral.ai/news/codestral)).
+**프런티어 회사와 도구 회사도 특화 모델을 만든다.** OpenAI는 GPT-5-Codex를 코딩 에이전트 작업에만 쓰도록 권한다. 사내 사용 기록에서 토큰을 가장 적게 쓰는 하위 10% 요청에서는 GPT-5보다 토큰을 93.7% 덜 썼고, 가장 많이 쓰는 상위 10%에서는 두 배쯤 오래 추론하고 코드를 고치고 테스트했다 [\[4\]](#ref-17-1-4). 코딩 도구 회사 Cursor는 소프트웨어 공학 작업에 강화학습으로 맞춘 MoE 모델 Composer를 내놓고, 비슷한 모델보다 생성 속도가 4배 빠르다고 밝혔다. 이 수치는 Cursor 자체 벤치마크 기준이다 [\[21\]](#ref-17-1-21). Mistral AI의 Codestral도 코드 생성 작업을 위해 만든 공개 가중치 모델이다 [\[22\]](#ref-17-1-22).
 
 ### '특화'를 하는 방법이 바뀌고 있다
 
@@ -115,41 +117,41 @@ Arena 점수는 사람의 선호를 모은 값이라 특정 작업의 정확도�
 
 ### 왜 추론 비용이 중요해졌나
 
-AI 연산에서 학습보다 실행, 즉 추론이 차지하는 몫이 커지고 있다. Deloitte는 2026년에 AI 연산의 3분의 2가 추론에 쓰일 것으로 전망하면서, 그 대부분은 여전히 비싸고 전력을 많이 쓰는 데이터센터 칩에서 처리될 것으로 봤다 ([Deloitte, 2025](https://www.deloitte.com/global/en/about/press-room/2026-tmt-predictions.html)).
+AI 연산에서 학습보다 실행, 즉 추론이 차지하는 몫이 커지고 있다. Deloitte는 2026년에 AI 연산의 3분의 2가 추론에 쓰일 것으로 전망하면서, 그 대부분은 여전히 비싸고 전력을 많이 쓰는 데이터센터 칩에서 처리될 것으로 봤다 [\[23\]](#ref-17-1-23).
 
-같은 성능을 얻는 가격은 빠르게 떨어졌다. AI Index 2025에 따르면 GPT-3.5 수준의 성능을 내는 모델의 사용 가격은 2022년 11월 100만 토큰당 20달러에서 2024년 10월 0.07달러로 280배 넘게 떨어졌다 ([Stanford HAI, 2025](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts)). Epoch AI는 벤치마크와 성능 기준에 따라 하락 속도가 연 9배에서 900배까지 다르며, 가장 빠른 하락은 최근 1년에 몰려 있어 계속될지는 분명하지 않다고 봤다 ([Epoch AI, 2025](https://epoch.ai/data-insights/llm-inference-price-trends)).
+같은 성능을 얻는 가격은 빠르게 떨어졌다. AI Index 2025에 따르면 GPT-3.5 수준의 성능을 내는 모델의 사용 가격은 2022년 11월 100만 토큰당 20달러에서 2024년 10월 0.07달러로 280배 넘게 떨어졌다 [\[5\]](#ref-17-1-5). Epoch AI는 벤치마크와 성능 기준에 따라 하락 속도가 연 9배에서 900배까지 다르며, 가장 빠른 하락은 최근 1년에 몰려 있어 계속될지는 분명하지 않다고 봤다 [\[24\]](#ref-17-1-24).
 
 ### 비용을 낮추는 네 가지 층
 
 가격이 떨어진 데에는 여러 층의 기술이 함께 작용했다.
 
-**모델 구조: 전문가 혼합과 증류.** MoE 모델은 여러 개의 하위 신경망(전문가)을 두고, 토큰마다 그중 일부만 계산에 쓴다. DeepSeek-V3는 전체 671B 가운데 토큰마다 37B를 쓰고 ([DeepSeek-AI, 2024](https://arxiv.org/abs/2412.19437)), Kimi K2.5는 1T 가운데 32B를 쓴다 ([Moonshot AI, 2026](https://huggingface.co/moonshotai/Kimi-K2.5)). 계산량은 활성 파라미터에 맞춰 줄지만, 전체 가중치를 저장할 메모리는 여전히 필요하다. 큰 모델의 지식을 작은 모델에 옮기는 방법도 쓰인다. Qwen3 계열은 대표 모델의 지식을 활용해 작은 모델을 만드는 비용을 줄였다고 밝혔다 ([Yang 외, 2025](https://arxiv.org/abs/2505.09388)).
+**모델 구조: 전문가 혼합과 증류.** MoE 모델은 여러 개의 하위 신경망(전문가)을 두고, 토큰마다 그중 일부만 계산에 쓴다. DeepSeek-V3는 전체 671B 가운데 토큰마다 37B를 쓰고 [\[8\]](#ref-17-1-8), Kimi K2.5는 1T 가운데 32B를 쓴다 [\[13\]](#ref-17-1-13). 계산량은 활성 파라미터에 맞춰 줄지만, 전체 가중치를 저장할 메모리는 여전히 필요하다. 큰 모델의 지식을 작은 모델에 옮기는 방법도 쓰인다. Qwen3 계열은 대표 모델의 지식을 활용해 작은 모델을 만드는 비용을 줄였다고 밝혔다 [\[3\]](#ref-17-1-3).
 
-**압축: 양자화.** 양자화(quantization)는 가중치를 16비트 대신 4비트처럼 더 적은 비트로 저장하는 방법이다. 메모리가 줄고 계산이 빨라지는 대신 정확도가 떨어질 수 있다. AWQ는 활성값 분포를 보고 중요한 약 1%의 가중치를 보호하는 방식으로 4비트 양자화의 오차를 줄였고, 데스크톱과 모바일 GPU에서 FP16 구현보다 3배 넘게 빨랐다. Llama-2 70B를 모바일 GPU에 올릴 수 있다고도 보고했다 ([Lin 외, 2023](https://arxiv.org/abs/2306.00978)). 학습 단계부터 양자화를 고려하는 방법(Quantization Aware Training)도 쓰인다. Apple은 3세대 모델을 이 방법으로 압축했다고 밝혔고 ([Apple, 2026](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models)), Kimi K2.5는 INT4 양자화를 전제로 만든 상태로 공개되었다.
+**압축: 양자화.** 양자화(quantization)는 가중치를 16비트 대신 4비트처럼 더 적은 비트로 저장하는 방법이다. 메모리가 줄고 계산이 빨라지는 대신 정확도가 떨어질 수 있다. AWQ는 활성값 분포를 보고 중요한 약 1%의 가중치를 보호하는 방식으로 4비트 양자화의 오차를 줄였고, 데스크톱과 모바일 GPU에서 FP16 구현보다 3배 넘게 빨랐다. Llama-2 70B를 모바일 GPU에 올릴 수 있다고도 보고했다 [\[25\]](#ref-17-1-25). 학습 단계부터 양자화를 고려하는 방법(Quantization Aware Training)도 쓰인다. Apple은 3세대 모델을 이 방법으로 압축했다고 밝혔고 [\[26\]](#ref-17-1-26), Kimi K2.5는 INT4 양자화를 전제로 만든 상태로 공개되었다.
 
-**디코딩: 추측 디코딩.** 언어 모델은 토큰을 하나씩 순서대로 만든다. 추측 디코딩(speculative decoding)은 작은 모델이 몇 토큰을 먼저 써 보고, 큰 모델이 이를 한 번에 검사해 맞는 부분을 받아들이는 방법이다. 큰 모델의 분포에서 샘플링하므로 결과는 바뀌지 않으며, T5-XXL에서 2~3배 빨라졌다 ([Leviathan 외, 2022](https://arxiv.org/abs/2211.17192)).
+**디코딩: 추측 디코딩.** 언어 모델은 토큰을 하나씩 순서대로 만든다. 추측 디코딩(speculative decoding)은 작은 모델이 몇 토큰을 먼저 써 보고, 큰 모델이 이를 한 번에 검사해 맞는 부분을 받아들이는 방법이다. 큰 모델의 분포에서 샘플링하므로 결과는 바뀌지 않으며, T5-XXL에서 2~3배 빨라졌다 [\[27\]](#ref-17-1-27).
 
-**서빙 시스템: 메모리 관리와 묶음 처리.** 모델은 답을 만드는 동안 앞선 토큰의 중간 계산 결과(KV 캐시)를 메모리에 쌓아 둔다. 서버는 여러 사용자의 요청을 한데 묶어(배치) 한 번에 계산해야 처리량이 높아지는데, 요청마다 KV 캐시가 크고 길이도 계속 변하기 때문에 메모리를 잘못 관리하면 낭비가 생기고 묶을 수 있는 요청 수가 줄어든다. vLLM은 운영체제의 가상 메모리 기법을 본뜬 PagedAttention으로 이 메모리의 낭비를 거의 없앴고, 같은 응답 지연에서 처리량을 기존 시스템(FasterTransformer, Orca)보다 2~4배 높였다 ([Kwon 외, 2023](https://arxiv.org/abs/2309.06180)). 앞에서 본 LoRA Land처럼 기반 모델 하나에 여러 어댑터를 올려 서빙하는 방식도 이 층에 속한다. 특화 모델을 여러 개 운영하는 비용을 낮추므로, 특화 모델의 경제성과도 연결된다.
+**서빙 시스템: 메모리 관리와 묶음 처리.** 모델은 답을 만드는 동안 앞선 토큰의 중간 계산 결과(KV 캐시)를 메모리에 쌓아 둔다. 서버는 여러 사용자의 요청을 한데 묶어(배치) 한 번에 계산해야 처리량이 높아지는데, 요청마다 KV 캐시가 크고 길이도 계속 변하기 때문에 메모리를 잘못 관리하면 낭비가 생기고 묶을 수 있는 요청 수가 줄어든다. vLLM은 운영체제의 가상 메모리 기법을 본뜬 PagedAttention으로 이 메모리의 낭비를 거의 없앴고, 같은 응답 지연에서 처리량을 기존 시스템(FasterTransformer, Orca)보다 2~4배 높였다 [\[28\]](#ref-17-1-28). 앞에서 본 LoRA Land처럼 기반 모델 하나에 여러 어댑터를 올려 서빙하는 방식도 이 층에 속한다. 특화 모델을 여러 개 운영하는 비용을 낮추므로, 특화 모델의 경제성과도 연결된다.
 
 이 기술들은 데이터센터의 비용을 낮추는 데 쓰이는 동시에, 모델을 기기 안으로 들여보내는 수단이기도 하다.
 
 ### 기기 안으로: 온디바이스의 현재
 
-Android의 Gemini Nano는 운영체제의 AICore라는 시스템 서비스 안에서 실행되며, AICore는 기기의 하드웨어 가속을 활용해 추론 지연을 줄인다. Google은 데이터가 기기에 머물고, 네트워크 없이 동작하며, 추론 비용이 줄어든다는 점을 장점으로 든다. 동시에 토큰 수 제한, 기기 하드웨어의 한계, 모델 능력의 한계를 명시하고, 기기에서 처리할 수 없을 때 클라우드 모델로 넘기는 하이브리드 추론을 권한다 ([Android Developers, 2026](https://developer.android.com/ai/gemini-nano)).
+Android의 Gemini Nano는 운영체제의 AICore라는 시스템 서비스 안에서 실행되며, AICore는 기기의 하드웨어 가속을 활용해 추론 지연을 줄인다. Google은 데이터가 기기에 머물고, 네트워크 없이 동작하며, 추론 비용이 줄어든다는 점을 장점으로 든다. 동시에 토큰 수 제한, 기기 하드웨어의 한계, 모델 능력의 한계를 명시하고, 기기에서 처리할 수 없을 때 클라우드 모델로 넘기는 하이브리드 추론을 권한다 [\[29\]](#ref-17-1-29).
 
-Apple은 2026년 6월 3세대 Foundation Models를 발표했다 ([Apple, 2026](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models)).
+Apple은 2026년 6월 3세대 Foundation Models를 발표했다 [\[26\]](#ref-17-1-26).
 
 - **기기 모델.** AFM 3 Core는 3B 모델이다. AFM 3 Core Advanced는 전체 20B 가운데 요청에 따라 1B~4B만 활성화하는 희소 구조이며, 가장 성능이 높은 Apple silicon 기기에서만 쓸 수 있다. 전체 모델은 플래시 메모리(NAND)에 두고, 필요한 전문가만 DRAM으로 불러온다. 기기의 메모리 한계를 MoE 구조로 넘으려는 설계다.
 - **서버 모델.** AFM 3 Cloud와 Cloud Pro는 Apple의 Private Cloud Compute(PCC)에서 실행된다. Cloud Pro는 Google Cloud의 NVIDIA GPU에 맞춰 최적화되었다.
-- **선택 기준.** 개발자 세션에 따르면 기기 모델은 오프라인에서 동작하고 요청 한도가 없지만 컨텍스트가 4K 토큰(다음 OS 버전의 최신 기기에서는 8K)이다. PCC 모델은 32K 컨텍스트와 reasoning을 지원하는 대신 인터넷 연결이 필요하고 사용자별 일일 한도가 있다. Apple은 어느 모델을 쓸지 감이 아니라 평가 데이터로 정하라고 안내했다. 같은 프레임워크로 Anthropic과 Google 같은 외부 모델 제공자를 연결하는 기능은 2026년 6월 발표 시점에 "곧 제공"으로 소개되었다 ([Apple Developer, 2026a](https://developer.apple.com/videos/play/wwdc2026/319/); [Apple Developer, 2026b](https://developer.apple.com/videos/play/wwdc2026/339/)).
+- **선택 기준.** 개발자 세션에 따르면 기기 모델은 오프라인에서 동작하고 요청 한도가 없지만 컨텍스트가 4K 토큰(다음 OS 버전의 최신 기기에서는 8K)이다. PCC 모델은 32K 컨텍스트와 reasoning을 지원하는 대신 인터넷 연결이 필요하고 사용자별 일일 한도가 있다. Apple은 어느 모델을 쓸지 감이 아니라 평가 데이터로 정하라고 안내했다. 같은 프레임워크로 Anthropic과 Google 같은 외부 모델 제공자를 연결하는 기능은 2026년 6월 발표 시점에 "곧 제공"으로 소개되었다 [\[30\]](#ref-17-1-30)[\[31\]](#ref-17-1-31).
 
-같은 해 1월 Google과 Apple은 차세대 Apple Foundation Models가 Google의 Gemini 모델과 클라우드 기술을 기반으로 한다고 공동 발표했다 ([Google·Apple, 2026](https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/)). 자체 모델을 만들어 온 회사도 다음 세대의 기반은 외부 프런티어 모델에서 가져오기로 한 것이다.
+같은 해 1월 Google과 Apple은 차세대 Apple Foundation Models가 Google의 Gemini 모델과 클라우드 기술을 기반으로 한다고 공동 발표했다 [\[32\]](#ref-17-1-32). 자체 모델을 만들어 온 회사도 다음 세대의 기반은 외부 프런티어 모델에서 가져오기로 한 것이다.
 
-기기 쪽 보급은 늘고 있다. Counterpoint Research는 2026년 세계 스마트폰 출하량의 45%가 생성형 AI 기능을 갖춘 스마트폰이 될 것으로 전망했다 ([Counterpoint Research, 2026](https://counterpointresearch.com/insights/genai-smartphone-share-to-rise-to-45-percent-of-global-shipments-in-2026)). 출하 기준이므로 실제 사용률과는 다르다. Google과 Apple 모두 기기 모델만으로 끝내지 않고 클라우드 모델과 나눠 쓰는 구조를 택했다는 점, Deloitte가 추론의 대부분이 데이터센터에 남을 것으로 본 점을 함께 보면, 온디바이스는 클라우드를 대체하기보다 일부 작업을 나눠 맡는 쪽으로 자리 잡고 있다.
+기기 쪽 보급은 늘고 있다. Counterpoint Research는 2026년 세계 스마트폰 출하량의 45%가 생성형 AI 기능을 갖춘 스마트폰이 될 것으로 전망했다 [\[33\]](#ref-17-1-33). 출하 기준이므로 실제 사용률과는 다르다. Google과 Apple 모두 기기 모델만으로 끝내지 않고 클라우드 모델과 나눠 쓰는 구조를 택했다는 점, Deloitte가 추론의 대부분이 데이터센터에 남을 것으로 본 점을 함께 보면, 온디바이스는 클라우드를 대체하기보다 일부 작업을 나눠 맡는 쪽으로 자리 잡고 있다.
 
 ### 개발자의 컴퓨터에서
 
-같은 기술은 개발자 개인의 컴퓨터에서도 쓰인다. llama.cpp는 C/C++로 작성된 언어 모델 추론 도구로, 최소한의 설정으로 다양한 하드웨어에서 높은 성능을 내는 것을 목표로 한다. Apple silicon을 우선 지원하고, NVIDIA GPU(CUDA), Vulkan 등을 지원하며, 1.5비트부터 8비트까지의 양자화를 제공한다 ([ggml-org, llama.cpp](https://github.com/ggml-org/llama.cpp)). 여기에 gpt-oss-20b처럼 16GB 메모리에서 실행할 수 있는 공개 모델이 나오면서, 개인 노트북에서 인터넷 연결 없이 돌릴 수 있는 모델의 수준도 올라갔다. 모델을 직접 받아 운영할 때의 책임과 보안 문제는 §17.2에서 다룬다.
+같은 기술은 개발자 개인의 컴퓨터에서도 쓰인다. llama.cpp는 C/C++로 작성된 언어 모델 추론 도구로, 최소한의 설정으로 다양한 하드웨어에서 높은 성능을 내는 것을 목표로 한다. Apple silicon을 우선 지원하고, NVIDIA GPU(CUDA), Vulkan 등을 지원하며, 1.5비트부터 8비트까지의 양자화를 제공한다 [\[34\]](#ref-17-1-34). 여기에 gpt-oss-20b처럼 16GB 메모리에서 실행할 수 있는 공개 모델이 나오면서, 개인 노트북에서 인터넷 연결 없이 돌릴 수 있는 모델의 수준도 올라갔다. 모델을 직접 받아 운영할 때의 책임과 보안 문제는 §17.2에서 다룬다.
 
 ### 실행 위치별 비교
 
@@ -207,37 +209,138 @@ B의 사례로 돌아가자. 화면과 데이터베이스 코드는 클라우드
 
 모든 링크는 2026년 10월 30일에 접속해 서지 정보와 본문 인용 내용을 확인했다.
 
-- Abdin, M. 외 (2024). [Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](https://arxiv.org/abs/2404.14219). arXiv:2404.14219.
-- Alibaba Group (2026-02-16). [Alibaba Open-Sources Qwen3.5, A Natively Multimodal Model Built For High-Efficiency Inference](https://www.alibabagroup.com/en-US/document-1960233590314762240).
-- Android Developers. [Gemini Nano](https://developer.android.com/ai/gemini-nano). 2026-10-08 갱신본.
-- Apple (2026-06-08). [Introducing the Third Generation of Apple's Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models). Apple Machine Learning Research.
-- Apple Developer (2026a). [Build with the new Apple Foundation Model on Private Cloud Compute](https://developer.apple.com/videos/play/wwdc2026/319/). WWDC26.
-- Apple Developer (2026b). [Bring an LLM provider to the Foundation Models framework](https://developer.apple.com/videos/play/wwdc2026/339/). WWDC26.
-- Belcak, P., Heinrich, G., Diao, S. 외 (2025). [Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153). arXiv:2506.02153.
-- Cottier, B. 외 (2024). [The rising costs of training frontier AI models](https://arxiv.org/abs/2405.21015). arXiv:2405.21015.
-- Counterpoint Research (2026-06-22). [GenAI Smartphone Share to Rise to 45% of Global Shipments in 2026](https://counterpointresearch.com/insights/genai-smartphone-share-to-rise-to-45-percent-of-global-shipments-in-2026).
-- Cursor (2025-10-29). [Composer: Building a fast frontier model with RL](https://cursor.com/blog/composer).
-- DeepSeek (2026-04-24). [DeepSeek-V4 Preview Release](https://api-docs.deepseek.com/news/news260424/).
-- DeepSeek-AI (2024). [DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437). arXiv:2412.19437.
-- Deloitte (2025-11-18). [Deloitte 2026 Technology, Media & Telecommunications Predictions: Narrowing the gap between the promise of AI and its reality](https://www.deloitte.com/global/en/about/press-room/2026-tmt-predictions.html). 보도자료.
-- Epoch AI (2025-03-12). [LLM inference prices have fallen rapidly but unequally across tasks](https://epoch.ai/data-insights/llm-inference-price-trends).
-- Gartner (2025-04-09). [Gartner Predicts by 2027, Organizations Will Use Small, Task-Specific AI Models Three Times More Than General-Purpose Large Language Models](https://www.gartner.com/en/newsroom/press-releases/2025-04-09-gartner-predicts-by-2027-organizations-will-use-small-task-specific-ai-models-three-times-more-than-general-purpose-large-language-models). 보도자료.
-- ggml-org. [llama.cpp](https://github.com/ggml-org/llama.cpp). GitHub.
-- GLM-5 Team (2026). [GLM-5: from Vibe Coding to Agentic Engineering](https://arxiv.org/abs/2602.15763). arXiv:2602.15763.
-- Google·Apple (2026-01-12). [Joint statement from Google and Apple](https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/).
-- Kimi Team (2026). [Kimi K2.5: Visual Agentic Intelligence](https://arxiv.org/abs/2602.02276). arXiv:2602.02276.
-- Kwon, W. 외 (2023). [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180). SOSP 2023.
-- Leviathan, Y., Kalman, M., Matias, Y. (2022). [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192). arXiv:2211.17192.
-- Lin, J. 외 (2023). [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978). MLSys 2024.
-- Mistral AI (2024-05-29). [Codestral](https://mistral.ai/news/codestral).
-- Moonshot AI (2026). [Kimi-K2.5](https://huggingface.co/moonshotai/Kimi-K2.5). Hugging Face 모델 카드.
-- Nori, H., Daswani, M. 외 (2025). [Sequential Diagnosis with Language Models](https://arxiv.org/abs/2506.22405). arXiv:2506.22405.
-- Nori, H. 외 (2023). [Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/abs/2311.16452). arXiv:2311.16452.
-- OpenAI (2025a, 2025-08-05). [Introducing gpt-oss](https://openai.com/index/introducing-gpt-oss/).
-- OpenAI (2025b, 2025-09-15). [Introducing upgrades to Codex](https://openai.com/index/introducing-upgrades-to-codex/).
-- Yang, A. 외 (2025). [Qwen3 Technical Report](https://arxiv.org/abs/2505.09388). arXiv:2505.09388.
-- Sellergren, A., Kazemzadeh, S., Jaroensri, T. 외 (2025). [MedGemma Technical Report](https://arxiv.org/abs/2507.05201). arXiv:2507.05201.
-- Stanford HAI (2025-04-07). [AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts). AI Index 2025 보고서의 요약.
-- Stanford HAI (2026). [AI Index Report 2026, Chapter 2: Technical Performance](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf).
-- Wu, S. 외 (2023). [BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564). arXiv:2303.17564.
-- Zhao, J. 외 (2024). [LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report](https://arxiv.org/abs/2405.00732). arXiv:2405.00732.
+::: {#ref-17-1-1}
+[1] Sellergren, A., Kazemzadeh, S., Jaroensri, T. 외 (2025). [MedGemma Technical Report](https://arxiv.org/abs/2507.05201). arXiv:2507.05201.
+:::
+
+::: {#ref-17-1-2}
+[2] OpenAI (2025-08-05). [Introducing gpt-oss](https://openai.com/index/introducing-gpt-oss/).
+:::
+
+::: {#ref-17-1-3}
+[3] Yang, A. 외 (2025). [Qwen3 Technical Report](https://arxiv.org/abs/2505.09388). arXiv:2505.09388.
+:::
+
+::: {#ref-17-1-4}
+[4] OpenAI (2025-09-15). [Introducing upgrades to Codex](https://openai.com/index/introducing-upgrades-to-codex/).
+:::
+
+::: {#ref-17-1-5}
+[5] Stanford HAI (2025-04-07). [AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts). AI Index 2025 보고서의 요약.
+:::
+
+::: {#ref-17-1-6}
+[6] Abdin, M. 외 (2024). [Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](https://arxiv.org/abs/2404.14219). arXiv:2404.14219.
+:::
+
+::: {#ref-17-1-7}
+[7] Cottier, B. 외 (2024). [The rising costs of training frontier AI models](https://arxiv.org/abs/2405.21015). arXiv:2405.21015.
+:::
+
+::: {#ref-17-1-8}
+[8] DeepSeek-AI (2024). [DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437). arXiv:2412.19437.
+:::
+
+::: {#ref-17-1-9}
+[9] Stanford HAI (2026). [AI Index Report 2026, Chapter 2: Technical Performance](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf).
+:::
+
+::: {#ref-17-1-10}
+[10] Alibaba Group (2026-02-16). [Alibaba Open-Sources Qwen3.5, A Natively Multimodal Model Built For High-Efficiency Inference](https://www.alibabagroup.com/en-US/document-1960233590314762240).
+:::
+
+::: {#ref-17-1-11}
+[11] GLM-5 Team (2026). [GLM-5: from Vibe Coding to Agentic Engineering](https://arxiv.org/abs/2602.15763). arXiv:2602.15763.
+:::
+
+::: {#ref-17-1-12}
+[12] DeepSeek (2026-04-24). [DeepSeek-V4 Preview Release](https://api-docs.deepseek.com/news/news260424/).
+:::
+
+::: {#ref-17-1-13}
+[13] Moonshot AI (2026). [Kimi-K2.5](https://huggingface.co/moonshotai/Kimi-K2.5). Hugging Face 모델 카드.
+:::
+
+::: {#ref-17-1-14}
+[14] Kimi Team (2026). [Kimi K2.5: Visual Agentic Intelligence](https://arxiv.org/abs/2602.02276). arXiv:2602.02276.
+:::
+
+::: {#ref-17-1-15}
+[15] Wu, S. 외 (2023). [BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564). arXiv:2303.17564.
+:::
+
+::: {#ref-17-1-16}
+[16] Nori, H. 외 (2023). [Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/abs/2311.16452). arXiv:2311.16452.
+:::
+
+::: {#ref-17-1-17}
+[17] Nori, H., Daswani, M. 외 (2025). [Sequential Diagnosis with Language Models](https://arxiv.org/abs/2506.22405). arXiv:2506.22405.
+:::
+
+::: {#ref-17-1-18}
+[18] Zhao, J. 외 (2024). [LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report](https://arxiv.org/abs/2405.00732). arXiv:2405.00732.
+:::
+
+::: {#ref-17-1-19}
+[19] Belcak, P., Heinrich, G., Diao, S. 외 (2025). [Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153). arXiv:2506.02153.
+:::
+
+::: {#ref-17-1-20}
+[20] Gartner (2025-04-09). [Gartner Predicts by 2027, Organizations Will Use Small, Task-Specific AI Models Three Times More Than General-Purpose Large Language Models](https://www.gartner.com/en/newsroom/press-releases/2025-04-09-gartner-predicts-by-2027-organizations-will-use-small-task-specific-ai-models-three-times-more-than-general-purpose-large-language-models). 보도자료.
+:::
+
+::: {#ref-17-1-21}
+[21] Cursor (2025-10-29). [Composer: Building a fast frontier model with RL](https://cursor.com/blog/composer).
+:::
+
+::: {#ref-17-1-22}
+[22] Mistral AI (2024-05-29). [Codestral](https://mistral.ai/news/codestral).
+:::
+
+::: {#ref-17-1-23}
+[23] Deloitte (2025-11-18). [Deloitte 2026 Technology, Media & Telecommunications Predictions: Narrowing the gap between the promise of AI and its reality](https://www.deloitte.com/global/en/about/press-room/2026-tmt-predictions.html). 보도자료.
+:::
+
+::: {#ref-17-1-24}
+[24] Epoch AI (2025-03-12). [LLM inference prices have fallen rapidly but unequally across tasks](https://epoch.ai/data-insights/llm-inference-price-trends).
+:::
+
+::: {#ref-17-1-25}
+[25] Lin, J. 외 (2023). [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978). MLSys 2024.
+:::
+
+::: {#ref-17-1-26}
+[26] Apple (2026-06-08). [Introducing the Third Generation of Apple's Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models). Apple Machine Learning Research.
+:::
+
+::: {#ref-17-1-27}
+[27] Leviathan, Y., Kalman, M., Matias, Y. (2022). [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192). arXiv:2211.17192.
+:::
+
+::: {#ref-17-1-28}
+[28] Kwon, W. 외 (2023). [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180). SOSP 2023.
+:::
+
+::: {#ref-17-1-29}
+[29] Android Developers. [Gemini Nano](https://developer.android.com/ai/gemini-nano). 2026-10-08 갱신본.
+:::
+
+::: {#ref-17-1-30}
+[30] Apple Developer (2026). [Build with the new Apple Foundation Model on Private Cloud Compute](https://developer.apple.com/videos/play/wwdc2026/319/). WWDC26.
+:::
+
+::: {#ref-17-1-31}
+[31] Apple Developer (2026). [Bring an LLM provider to the Foundation Models framework](https://developer.apple.com/videos/play/wwdc2026/339/). WWDC26.
+:::
+
+::: {#ref-17-1-32}
+[32] Google·Apple (2026-01-12). [Joint statement from Google and Apple](https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/).
+:::
+
+::: {#ref-17-1-33}
+[33] Counterpoint Research (2026-06-22). [GenAI Smartphone Share to Rise to 45% of Global Shipments in 2026](https://counterpointresearch.com/insights/genai-smartphone-share-to-rise-to-45-percent-of-global-shipments-in-2026).
+:::
+
+::: {#ref-17-1-34}
+[34] ggml-org. [llama.cpp](https://github.com/ggml-org/llama.cpp). GitHub.
+:::

@@ -125,6 +125,7 @@ book:
         - sections/16-4-computer-use-agents.qmd
     - part: "Chapter 17 · Where Models and Tools Are Headed"
       chapters:
+        - sections/17-0-introduction.qmd
         - sections/17-1-future-model-landscape.qmd
         - sections/17-2-operating-open-weight-models.qmd
         - sections/17-3-future-development-environments.qmd
