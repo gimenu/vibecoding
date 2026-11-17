@@ -16,20 +16,21 @@ AI 코딩에 쓸 모델을 이야기할 때 흔히 프런티어, 특화, 온디�
 * OpenAI의 gpt-oss-20b는 범용 모델이지만 16GB 메모리에서 실행할 수 있는 크기로 공개되었다 [\[2\]](#ref-17-1-2).
 * 한 모델 계열 안에서도 크기가 크게 갈린다. Alibaba의 Qwen3 계열은 0.6B부터 235B까지의 모델을 함께 내놓았고, 대표 모델의 지식을 활용해 작은 모델을 만드는 데 드는 계산을 크게 줄였다고 밝혔다 [\[3\]](#ref-17-1-3).
 * 프런티어 모델을 만드는 회사가 특화 모델을 내기도 한다. OpenAI의 GPT-5-Codex는 GPT-5를 코딩 에이전트 작업에 맞게 더 다듬은 모델이다 [\[4\]](#ref-17-1-4).
+* Google의 FunctionGemma는 약 2억 7천만 개의 매개변수(270M)를 가진 Gemma 3를 함수 호출에 맞게 미세조정한 모델이다. 휴대폰 등 기기에서 앱의 정해진 기능을 호출하는 용도로 설계되었다 [\[37\]](#ref-17-1-37).
 
 프런티어라는 기준은 시간에 따라 변하기도 한다. Stanford HAI의 AI Index 2025에 따르면, 여러 분야의 객관식 지식 문제로 구성된 MMLU 벤치마크에서 60%를 넘긴 가장 작은 모델은 2022년 PaLM(540B)에서 2024년 Microsoft의 Phi-3-mini(3.8B)로 바뀌었다. 같은 문턱을 넘는 데 필요한 크기가 142분의 1로 줄었다 [\[5\]](#ref-17-1-5). Phi-3 기술 보고서는 이 모델이 휴대폰에 배포할 수 있을 만큼 작다고 밝혔다 [\[6\]](#ref-17-1-6). 이 벤치마크 기준으로는 몇 년 전 대형 모델이 넘던 문턱을 기기에 탑재할 수 있는 소형 모델도 넘게 되었다.
 
-아래 그림은 모델의 작업 범위와 실행 위치를 조합한 예시이다(@fig-17-1-1). 프런티어는 작업 범위나 실행 위치와는 별도로 판단하는 성능 수준이므로, 범용 모델 가운데 최상위 모델을 점선 상자로 따로 표시했다. 어둡게 칠한 칸은 해당 조합에 대한 확인된 사례가 없음을 의미한다.
+아래 그림은 모델의 작업 범위와 실행 위치를 조합한 대표 사례다(@fig-17-1-1). 프런티어는 작업 범위나 실행 위치와는 별도로 판단하는 성능 수준이므로, 범용 모델 가운데 최상위 모델을 점선 상자로 따로 표시했다.
 
 ::: {.content-visible when-format="html"}
 
-![작업 범위와 실행 위치는 서로 다른 기준이며, 프런티어는 범용 모델 가운데 특정 시점의 최상위 성능 수준을 가리킨다. 어둡게 칠한 칸은 확인된 사례가 없는 조합이다(본문 사례 정리).](../images/17-1/figure1_model_axes.png){#fig-17-1-1 fig-alt="열은 제공사의 클라우드, 직접 운영하는 서버, 사용자의 기기이고 행은 범용과 특화다. 범용 행의 클라우드 칸에는 프런티어(최상위 성능) 상자 안에 Claude, Gemini, GPT, Grok이 있고, 그 아래 DeepSeek-V4 API와 Apple AFM 3 Cloud가 있다. 직접 운영하는 서버 칸에는 GLM-5, DeepSeek-V4, Qwen3.5, Kimi K2.5, gpt-oss-120b, 사용자의 기기 칸에는 Apple AFM 3 Core, Gemini Nano, Phi-3-mini, gpt-oss-20b가 있다. 특화 행에는 GPT-5-Codex, Cursor Composer, MedGemma, BloombergGPT, LoRA 미세조정 소형 모델이 있고, 특화 행의 기기 칸은 확인된 사례가 없어 어둡게 칠해져 있다."}
+![대표 모델을 작업 범위와 실행 위치에 따라 나누었다. FunctionGemma는 함수 호출에 특화한 모델을 사용자 기기에서 실행하는 사례다. 점선은 본문에서 제시한 프런티어 모델의 예를 표시한다.](../images/17-1/figure1_model_axes.png){#fig-17-1-1 fig-alt="열은 제공사 클라우드, 직접 운영 서버, 사용자 기기이고 행은 범용과 특화다. 범용 행에는 GPT, Claude, Gemini, Grok, GLM-5, Qwen3.5, Gemini Nano, gpt-oss-20b의 대표 사례가 있다. 특화 행에는 GPT-5-Codex와 Cursor Composer, MedGemma와 BloombergGPT, 그리고 기기에서 함수 호출을 맡는 FunctionGemma 270M이 있다."}
 
 :::
 
 ::: {.content-visible when-format="typst"}
 
-![작업 범위와 실행 위치는 서로 다른 기준이며, 프런티어는 범용 모델 가운데 특정 시점의 최상위 성능 수준을 가리킨다. 어둡게 칠한 칸은 확인된 사례가 없는 조합이다(본문 사례 정리).](images/17-1/figure1_model_axes.png){#fig-17-1-1 fig-alt="열은 제공사의 클라우드, 직접 운영하는 서버, 사용자의 기기이고 행은 범용과 특화다. 범용 행의 클라우드 칸에는 프런티어(최상위 성능) 상자 안에 Claude, Gemini, GPT, Grok이 있고, 그 아래 DeepSeek-V4 API와 Apple AFM 3 Cloud가 있다. 직접 운영하는 서버 칸에는 GLM-5, DeepSeek-V4, Qwen3.5, Kimi K2.5, gpt-oss-120b, 사용자의 기기 칸에는 Apple AFM 3 Core, Gemini Nano, Phi-3-mini, gpt-oss-20b가 있다. 특화 행에는 GPT-5-Codex, Cursor Composer, MedGemma, BloombergGPT, LoRA 미세조정 소형 모델이 있고, 특화 행의 기기 칸은 확인된 사례가 없어 어둡게 칠해져 있다."}
+![대표 모델을 작업 범위와 실행 위치에 따라 나누었다. FunctionGemma는 함수 호출에 특화한 모델을 사용자 기기에서 실행하는 사례다. 점선은 본문에서 제시한 프런티어 모델의 예를 표시한다.](images/17-1/figure1_model_axes.png){#fig-17-1-1 fig-alt="열은 제공사 클라우드, 직접 운영 서버, 사용자 기기이고 행은 범용과 특화다. 범용 행에는 GPT, Claude, Gemini, Grok, GLM-5, Qwen3.5, Gemini Nano, gpt-oss-20b의 대표 사례가 있다. 특화 행에는 GPT-5-Codex와 Cursor Composer, MedGemma와 BloombergGPT, 그리고 기기에서 함수 호출을 맡는 FunctionGemma 270M이 있다."}
 
 :::
 
@@ -127,17 +128,17 @@ Arena 점수는 사람의 선호를 반영한 값으로, 특정 작업의 정확
 
 ### 추론 비용 절감의 네 가지 층위
 
-가격 하락에는 여러 기술적 요소가 복합적으로 작용했다. 아래 네 층위가 각각 줄이는 대상과 기기 실행과의 연결은 그림으로 정리했다(@fig-17-1-2).
+가격 하락에는 여러 기술적 요소가 복합적으로 작용했다. 네 층위에서 줄이는 대상과 대표 기법을 그림으로 정리했다(@fig-17-1-2).
 
 ::: {.content-visible when-format="html"}
 
-![추론 비용을 낮추는 네 가지 층위가 각각 줄이는 대상과 기기 실행과의 연결. 어둡게 칠한 칸은 본문에서 기기 실행 사례를 다루지 않은 경우다(본문 사례 정리).](../images/17-1/figure2_inference_layers.png){#fig-17-1-2 fig-alt="A 모델 구조는 토큰마다 계산하는 파라미터 수를 줄이며 MoE와 증류가 해당하고, 기기에서는 AFM 3 Core Advanced가 20B 중 1~4B만 활성화한다. B 압축은 가중치의 비트 수와 메모리를 줄이며 AWQ와 Kimi K2.5의 INT4가 해당하고, 기기에서는 Apple의 QAT와 llama.cpp 양자화가 쓰인다. C 디코딩은 큰 모델의 순차 실행 횟수를 줄이는 추측 디코딩이며, 기기 실행 칸은 본문 사례가 없어 어둡게 칠해져 있다. D 서빙은 요청을 묶을 때의 메모리 낭비를 줄이는 vLLM과 다중 LoRA 어댑터이며 주로 서버 쪽 기술이다."}
+![추론 자원을 줄이는 대표 기법을 보여준다. A는 계산할 전문가를 고르고, B는 가중치의 저장 비트 수를 줄인다. C는 후보 토큰을 묶어 검사하고, D는 요청 A와 B에 캐시 공간을 블록 단위로 배분한다(개념도).](../images/17-1/figure2_inference_layers.png){#fig-17-1-2 fig-alt="A 모델 구조에서는 전체 전문가 중 입력에 맞는 일부만 계산한다. B 압축에서는 가중치의 저장 공간을 16비트에서 4비트로 줄이는 예를 보인다. C 디코딩에서는 작은 모델이 만든 후보 토큰들을 큰 모델이 한 번에 검사한다. D 서빙에서는 서로 다른 요청 A와 B에 필요한 캐시 공간을 메모리 블록으로 나누어 배분한다."}
 
 :::
 
 ::: {.content-visible when-format="typst"}
 
-![추론 비용을 낮추는 네 가지 층위가 각각 줄이는 대상과 기기 실행과의 연결. 어둡게 칠한 칸은 본문에서 기기 실행 사례를 다루지 않은 경우다(본문 사례 정리).](images/17-1/figure2_inference_layers.png){#fig-17-1-2 fig-alt="A 모델 구조는 토큰마다 계산하는 파라미터 수를 줄이며 MoE와 증류가 해당하고, 기기에서는 AFM 3 Core Advanced가 20B 중 1~4B만 활성화한다. B 압축은 가중치의 비트 수와 메모리를 줄이며 AWQ와 Kimi K2.5의 INT4가 해당하고, 기기에서는 Apple의 QAT와 llama.cpp 양자화가 쓰인다. C 디코딩은 큰 모델의 순차 실행 횟수를 줄이는 추측 디코딩이며, 기기 실행 칸은 본문 사례가 없어 어둡게 칠해져 있다. D 서빙은 요청을 묶을 때의 메모리 낭비를 줄이는 vLLM과 다중 LoRA 어댑터이며 주로 서버 쪽 기술이다."}
+![추론 자원을 줄이는 대표 기법을 보여준다. A는 계산할 전문가를 고르고, B는 가중치의 저장 비트 수를 줄인다. C는 후보 토큰을 묶어 검사하고, D는 요청 A와 B에 캐시 공간을 블록 단위로 배분한다(개념도).](images/17-1/figure2_inference_layers.png){#fig-17-1-2 fig-alt="A 모델 구조에서는 전체 전문가 중 입력에 맞는 일부만 계산한다. B 압축에서는 가중치의 저장 공간을 16비트에서 4비트로 줄이는 예를 보인다. C 디코딩에서는 작은 모델이 만든 후보 토큰들을 큰 모델이 한 번에 검사한다. D 서빙에서는 서로 다른 요청 A와 B에 필요한 캐시 공간을 메모리 블록으로 나누어 배분한다."}
 
 :::
 
@@ -154,6 +155,8 @@ Arena 점수는 사람의 선호를 반영한 값으로, 특정 작업의 정확
 ### 온디바이스 AI 기술 현황
 
 안드로이드(Android)에서는 이를 지원하는 기기에서 '제미나이 나노(Gemini Nano)'라는 경량 AI 모델을 사용할 수 있다. 이 모델은 시스템 수준 서비스인 ‘AICore’ 내에서 동작하며, 스마트폰이나 태블릿 등 기기 하드웨어의 AI 가속 기능을 활용해 모델 실행(추론) 속도를 향상시킨다. 구글(Google)은 이 구조의 장점으로 데이터가 기기에서 벗어나지 않아 개인정보 보호에 유리하고, 네트워크 연결 없이도 AI가 동작하며, 실행 비용이 절감된다는 점을 강조한다. 그러나 한 번에 처리할 수 있는 토큰 수, 기기별 하드웨어 한계, 모델 성능의 한계도 함께 명시되어 있다. Google은 이러한 제약이 있는 경우 기기와 클라우드 사이에 작업을 나누는 ‘하이브리드 추론’을 사용할 수 있다고 안내하며, Gemini Nano를 사용할 수 없는 기기에서는 요청을 클라우드의 Gemini 모델로 자동 전환하는 방법도 제공한다[\[29\]](#ref-17-1-29).
+
+기기의 앱 기능에 맞춰 소형 모델을 배포하는 방법도 있다. 앞서 소개한 FunctionGemma는 사용자의 요청을 앱이 제공하는 함수의 이름과 입력값으로 바꾼다. 예를 들어 “내일 점심 약속을 일정에 추가해 줘”라는 요청을 일정 등록 함수의 호출로 바꾸는 식이다. Google의 Mobile Actions 예시에서는 일정 등록과 손전등 켜기 같은 동작에 맞춰 추가 학습한 모델을 휴대폰에서 실행한다. 개발자는 앱이 제공할 함수와 입력 형식을 정하고, 해당 작업에서 올바른 호출이 나오는지 확인해야 한다 [\[37\]](#ref-17-1-37)[\[38\]](#ref-17-1-38).
 
 애플(Apple)도 기기 모델과 클라우드 모델을 함께 쓰는 구조를 택했다. 2026년 6월에 발표한 3세대 파운데이션 모델(Foundation Models)은 다음과 같이 구성된다[\[26\]](#ref-17-1-26).
 
@@ -229,150 +232,156 @@ Arena 점수는 사람의 선호를 반영한 값으로, 특정 작업의 정확
 
 :::
 
-## 참고 자료
-
-모든 링크는 2026년 10월 30일에 접속해 서지 정보와 본문 인용 내용을 확인했다. [9], [17], [23], [29]의 세부 내용과 [35], [36]은 2026년 11월 17일에 다시 확인했다.
+## 참고 자료 {.unnumbered}
 
 ::: {#ref-17-1-1}
-[1] Sellergren, A., Kazemzadeh, S., Jaroensri, T. 외 (2025). [MedGemma Technical Report](https://arxiv.org/abs/2507.05201). arXiv:2507.05201.
+[1] [Sellergren, A., Kazemzadeh, S., Jaroensri, T. 외, MedGemma Technical Report](https://arxiv.org/abs/2507.05201). (확인: 2026-10-30; 발행: 2025; arXiv:2507.05201).
 :::
 
 ::: {#ref-17-1-2}
-[2] OpenAI (2025-08-05). [Introducing gpt-oss](https://openai.com/index/introducing-gpt-oss/).
+[2] [OpenAI, Introducing gpt-oss](https://openai.com/index/introducing-gpt-oss/). (확인: 2026-10-30; 발행: 2025-08-05).
 :::
 
 ::: {#ref-17-1-3}
-[3] Yang, A. 외 (2025). [Qwen3 Technical Report](https://arxiv.org/abs/2505.09388). arXiv:2505.09388.
+[3] [Yang, A. 외, Qwen3 Technical Report](https://arxiv.org/abs/2505.09388). (확인: 2026-10-30; 발행: 2025; arXiv:2505.09388).
 :::
 
 ::: {#ref-17-1-4}
-[4] OpenAI (2025-09-15). [Introducing upgrades to Codex](https://openai.com/index/introducing-upgrades-to-codex/).
+[4] [OpenAI, Introducing upgrades to Codex](https://openai.com/index/introducing-upgrades-to-codex/). (확인: 2026-10-30; 발행: 2025-09-15).
 :::
 
 ::: {#ref-17-1-5}
-[5] Stanford HAI (2025-04-07). [AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts). AI Index 2025 보고서의 요약.
+[5] [Stanford HAI, AI Index 2025: State of AI in 10 Charts](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts). (확인: 2026-10-30; 발행: 2025-04-07; AI Index 2025 보고서의 요약).
 :::
 
 ::: {#ref-17-1-6}
-[6] Abdin, M. 외 (2024). [Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](https://arxiv.org/abs/2404.14219). arXiv:2404.14219.
+[6] [Abdin, M. 외, Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone](https://arxiv.org/abs/2404.14219). (확인: 2026-10-30; 발행: 2024; arXiv:2404.14219).
 :::
 
 ::: {#ref-17-1-7}
-[7] Cottier, B. 외 (2024). [The rising costs of training frontier AI models](https://arxiv.org/abs/2405.21015). arXiv:2405.21015.
+[7] [Cottier, B. 외, The rising costs of training frontier AI models](https://arxiv.org/abs/2405.21015). (확인: 2026-10-30; 발행: 2024; arXiv:2405.21015).
 :::
 
 ::: {#ref-17-1-8}
-[8] DeepSeek-AI (2024). [DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437). arXiv:2412.19437.
+[8] [DeepSeek-AI, DeepSeek-V3 Technical Report](https://arxiv.org/abs/2412.19437). (확인: 2026-10-30; 발행: 2024; arXiv:2412.19437).
 :::
 
 ::: {#ref-17-1-9}
-[9] Stanford HAI (2026). [AI Index Report 2026, Chapter 2: Technical Performance](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf).
+[9] [Stanford HAI, AI Index Report 2026, Chapter 2: Technical Performance](https://hai.stanford.edu/assets/files/ai_index_report_2026_chapter_2_technical.pdf). (확인: 2026-11-17; 발행: 2026).
 :::
 
 ::: {#ref-17-1-10}
-[10] Alibaba Group (2026-02-16). [Alibaba Open-Sources Qwen3.5, A Natively Multimodal Model Built For High-Efficiency Inference](https://www.alibabagroup.com/en-US/document-1960233590314762240).
+[10] [Alibaba Group, Alibaba Open-Sources Qwen3.5, A Natively Multimodal Model Built For High-Efficiency Inference](https://www.alibabagroup.com/en-US/document-1960233590314762240). (확인: 2026-10-30; 발행: 2026-02-16).
 :::
 
 ::: {#ref-17-1-11}
-[11] GLM-5 Team (2026). [GLM-5: from Vibe Coding to Agentic Engineering](https://arxiv.org/abs/2602.15763). arXiv:2602.15763.
+[11] [GLM-5 Team, GLM-5: from Vibe Coding to Agentic Engineering](https://arxiv.org/abs/2602.15763). (확인: 2026-10-30; 발행: 2026; arXiv:2602.15763).
 :::
 
 ::: {#ref-17-1-12}
-[12] DeepSeek (2026-04-24). [DeepSeek-V4 Preview Release](https://api-docs.deepseek.com/news/news260424/).
+[12] [DeepSeek, DeepSeek-V4 Preview Release](https://api-docs.deepseek.com/news/news260424/). (확인: 2026-10-30; 발행: 2026-04-24).
 :::
 
 ::: {#ref-17-1-13}
-[13] Moonshot AI (2026). [Kimi-K2.5](https://huggingface.co/moonshotai/Kimi-K2.5). Hugging Face 모델 카드.
+[13] [Moonshot AI, Kimi-K2.5](https://huggingface.co/moonshotai/Kimi-K2.5). (확인: 2026-10-30; 발행: 2026; Hugging Face 모델 카드).
 :::
 
 ::: {#ref-17-1-14}
-[14] Kimi Team (2026). [Kimi K2.5: Visual Agentic Intelligence](https://arxiv.org/abs/2602.02276). arXiv:2602.02276.
+[14] [Kimi Team, Kimi K2.5: Visual Agentic Intelligence](https://arxiv.org/abs/2602.02276). (확인: 2026-10-30; 발행: 2026; arXiv:2602.02276).
 :::
 
 ::: {#ref-17-1-15}
-[15] Wu, S. 외 (2023). [BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564). arXiv:2303.17564.
+[15] [Wu, S. 외, BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564). (확인: 2026-10-30; 발행: 2023; arXiv:2303.17564).
 :::
 
 ::: {#ref-17-1-16}
-[16] Nori, H. 외 (2023). [Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/abs/2311.16452). arXiv:2311.16452. (재확인: 2026-11-16; v1, §4.1과 §4.4).
+[16] [Nori, H. 외, Can Generalist Foundation Models Outcompete Special-Purpose Tuning? Case Study in Medicine](https://arxiv.org/abs/2311.16452). (확인: 2026-11-16; 발행: 2023; arXiv:2311.16452; v1, §4.1과 §4.4).
 :::
 
 ::: {#ref-17-1-17}
-[17] Nori, H., Daswani, M. 외 (2025). [Sequential Diagnosis with Language Models](https://arxiv.org/abs/2506.22405). arXiv:2506.22405. (재확인: 2026-11-16; v2, §1, §3.3과 §4; 비용은 검사 및 진료의 추정치).
+[17] [Nori, H., Daswani, M. 외, Sequential Diagnosis with Language Models](https://arxiv.org/abs/2506.22405). (확인: 2026-11-17; 발행: 2025; arXiv:2506.22405; v2, §1, §3.3과 §4; 비용은 검사 및 진료의 추정치).
 :::
 
 ::: {#ref-17-1-18}
-[18] Zhao, J. 외 (2024). [LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report](https://arxiv.org/abs/2405.00732). arXiv:2405.00732.
+[18] [Zhao, J. 외, LoRA Land: 310 Fine-tuned LLMs that Rival GPT-4, A Technical Report](https://arxiv.org/abs/2405.00732). (확인: 2026-10-30; 발행: 2024; arXiv:2405.00732).
 :::
 
 ::: {#ref-17-1-19}
-[19] Belcak, P., Heinrich, G., Diao, S. 외 (2025). [Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153). arXiv:2506.02153.
+[19] [Belcak, P., Heinrich, G., Diao, S. 외, Small Language Models are the Future of Agentic AI](https://arxiv.org/abs/2506.02153). (확인: 2026-10-30; 발행: 2025; arXiv:2506.02153).
 :::
 
 ::: {#ref-17-1-20}
-[20] Gartner (2025-04-09). [Gartner Predicts by 2027, Organizations Will Use Small, Task-Specific AI Models Three Times More Than General-Purpose Large Language Models](https://www.gartner.com/en/newsroom/press-releases/2025-04-09-gartner-predicts-by-2027-organizations-will-use-small-task-specific-ai-models-three-times-more-than-general-purpose-large-language-models). 보도자료.
+[20] [Gartner, Gartner Predicts by 2027, Organizations Will Use Small, Task-Specific AI Models Three Times More Than General-Purpose Large Language Models](https://www.gartner.com/en/newsroom/press-releases/2025-04-09-gartner-predicts-by-2027-organizations-will-use-small-task-specific-ai-models-three-times-more-than-general-purpose-large-language-models). (확인: 2026-10-30; 발행: 2025-04-09; 보도자료).
 :::
 
 ::: {#ref-17-1-21}
-[21] Cursor (2025-10-29). [Composer: Building a fast frontier model with RL](https://cursor.com/blog/composer).
+[21] [Cursor, Composer: Building a fast frontier model with RL](https://cursor.com/blog/composer). (확인: 2026-10-30; 발행: 2025-10-29).
 :::
 
 ::: {#ref-17-1-22}
-[22] Mistral AI (2024-05-29). [Codestral](https://mistral.ai/news/codestral).
+[22] [Mistral AI, Codestral](https://mistral.ai/news/codestral). (확인: 2026-10-30; 발행: 2024-05-29).
 :::
 
 ::: {#ref-17-1-23}
-[23] Deloitte (2025-11-18). [Deloitte 2026 Technology, Media & Telecommunications Predictions: Narrowing the gap between the promise of AI and its reality](https://www.deloitte.com/global/en/about/press-room/2026-tmt-predictions.html). 보도자료.
+[23] [Deloitte, Deloitte 2026 Technology, Media & Telecommunications Predictions: Narrowing the gap between the promise of AI and its reality](https://www.deloitte.com/global/en/about/press-room/2026-tmt-predictions.html). (확인: 2026-11-17; 발행: 2025-11-18; 보도자료).
 :::
 
 ::: {#ref-17-1-24}
-[24] Epoch AI (2025-03-12). [LLM inference prices have fallen rapidly but unequally across tasks](https://epoch.ai/data-insights/llm-inference-price-trends).
+[24] [Epoch AI, LLM inference prices have fallen rapidly but unequally across tasks](https://epoch.ai/data-insights/llm-inference-price-trends). (확인: 2026-10-30; 발행: 2025-03-12).
 :::
 
 ::: {#ref-17-1-25}
-[25] Lin, J. 외 (2023). [AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978). MLSys 2024.
+[25] [Lin, J. 외, AWQ: Activation-aware Weight Quantization for LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978). (확인: 2026-10-30; 발행: 2023; MLSys 2024).
 :::
 
 ::: {#ref-17-1-26}
-[26] Apple (2026-06-08). [Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models). Apple Machine Learning Research.
+[26] [Apple, Introducing the Third Generation of Apple’s Foundation Models](https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models). (확인: 2026-10-30; 발행: 2026-06-08; Apple Machine Learning Research).
 :::
 
 ::: {#ref-17-1-27}
-[27] Leviathan, Y., Kalman, M., Matias, Y. (2022). [Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192). arXiv:2211.17192.
+[27] [Leviathan, Y., Kalman, M., Matias, Y., Fast Inference from Transformers via Speculative Decoding](https://arxiv.org/abs/2211.17192). (확인: 2026-10-30; 발행: 2022; arXiv:2211.17192).
 :::
 
 ::: {#ref-17-1-28}
-[28] Kwon, W. 외 (2023). [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180). SOSP 2023.
+[28] [Kwon, W. 외, Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/abs/2309.06180). (확인: 2026-10-30; 발행: 2023; SOSP 2023).
 :::
 
 ::: {#ref-17-1-29}
-[29] Android Developers. [Gemini Nano](https://developer.android.com/ai/gemini-nano). 2026-10-08 갱신본.
+[29] [Android Developers, Gemini Nano](https://developer.android.com/ai/gemini-nano). (확인: 2026-11-17; 2026-10-08 갱신본).
 :::
 
 ::: {#ref-17-1-30}
-[30] Apple Developer (2026). [Build with the new Apple Foundation Model on Private Cloud Compute](https://developer.apple.com/videos/play/wwdc2026/319/). WWDC26.
+[30] [Apple Developer, Build with the new Apple Foundation Model on Private Cloud Compute](https://developer.apple.com/videos/play/wwdc2026/319/). (확인: 2026-10-30; 발행: 2026; WWDC26).
 :::
 
 ::: {#ref-17-1-31}
-[31] Apple Developer (2026). [Bring an LLM provider to the Foundation Models framework](https://developer.apple.com/videos/play/wwdc2026/339/). WWDC26.
+[31] [Apple Developer, Bring an LLM provider to the Foundation Models framework](https://developer.apple.com/videos/play/wwdc2026/339/). (확인: 2026-10-30; 발행: 2026; WWDC26).
 :::
 
 ::: {#ref-17-1-32}
-[32] Google·Apple (2026-01-12). [Joint statement from Google and Apple](https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/).
+[32] [Google·Apple, Joint statement from Google and Apple](https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/). (확인: 2026-10-30; 발행: 2026-01-12).
 :::
 
 ::: {#ref-17-1-33}
-[33] Counterpoint Research (2026-06-22). [GenAI Smartphone Share to Rise to 45% of Global Shipments in 2026](https://counterpointresearch.com/insights/genai-smartphone-share-to-rise-to-45-percent-of-global-shipments-in-2026).
+[33] [Counterpoint Research, GenAI Smartphone Share to Rise to 45% of Global Shipments in 2026](https://counterpointresearch.com/insights/genai-smartphone-share-to-rise-to-45-percent-of-global-shipments-in-2026). (확인: 2026-10-30; 발행: 2026-06-22).
 :::
 
 ::: {#ref-17-1-34}
-[34] ggml-org. [llama.cpp](https://github.com/ggml-org/llama.cpp). GitHub.
+[34] [ggml-org, llama.cpp](https://github.com/ggml-org/llama.cpp). (확인: 2026-10-30; GitHub).
 :::
 
 ::: {#ref-17-1-35}
-[35] Google (2026-06-08). [Bringing the latest Gemini models to Apple developers](https://blog.google/innovation-and-ai/technology/developers-tools/bringing-gemini-models-to-apple-developers/).
+[35] [Google, Bringing the latest Gemini models to Apple developers](https://blog.google/innovation-and-ai/technology/developers-tools/bringing-gemini-models-to-apple-developers/). (확인: 2026-11-17; 발행: 2026-06-08).
 :::
 
 ::: {#ref-17-1-36}
-[36] Z.ai. [GLM-5](https://huggingface.co/zai-org/GLM-5). Hugging Face 모델 카드.
+[36] [Z.ai, GLM-5](https://huggingface.co/zai-org/GLM-5). (확인: 2026-11-17; Hugging Face 모델 카드).
+:::
+
+::: {#ref-17-1-37}
+[37] [Google, FunctionGemma: Bringing bespoke function calling to the edge](https://blog.google/innovation-and-ai/technology/developers-tools/functiongemma/). (확인: 2026-11-17; 발행: 2025-12-18).
+:::
+
+::: {#ref-17-1-38}
+[38] [Google DeepMind, FunctionGemma model overview](https://gemma.ai/models/functiongemma/). (확인: 2026-11-17; Gemma Documentation).
 :::
