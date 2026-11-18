@@ -2,6 +2,31 @@
 
 # §17.2 오픈 웨이트 모델을 직접 운영한다면 {#sec-operating-open-weight-models .unnumbered}
 
+```{=html}
+<style>
+.ch17-table-layout table th + th,
+.ch17-table-layout table td + td { border-left: 1px solid #a6a6a6; }
+.ch17-table-layout table th,
+.ch17-table-layout table td { padding: 0.35em 0.5em; vertical-align: top; }
+.ch17-table-layout table td { border-bottom: 0.5px solid #d9d9d9; }
+</style>
+```
+
+:::: {.ch17-table-layout}
+
+```{=typst}
+#[
+#set table(
+  inset: (x: 4pt, y: 3pt),
+  stroke: (x, y) => (
+    left: if x > 0 { 0.45pt + luma(65%) } else { none },
+    right: none,
+    top: none,
+    bottom: 0.25pt + luma(85%),
+  ),
+)
+```
+
 2026년 9월, OpenAI가 나비에–스토크스 문제에 관한 연구 결과를 발표했다. 비슷한 문제를 연구하던 수학자 Tristan Buckmaster는 발표에 앞선 통화에서 자신이 Codex에 입력한 미공개 연구 초안이 OpenAI 모델의 학습이나 결과에 쓰였는지 물었다고 밝혔다. OpenAI는 조사 뒤 발표 전 두 달간의 Buckmaster 프롬프트가 결과에 영향을 줄 수 없었다고 설명했다. Buckmaster 역시 자신의 자료가 실제로 쓰였는지는 모른다고 명시했다. 이 사례는 데이터 유출이 확인된 사건이 아니다. 다만 외부 AI 도구에 자료를 넣은 사람이 그 자료의 처리 경로를 어디까지 알 수 있는지 묻게 한다 [\[1\]](#ref-17-2-1)[\[2\]](#ref-17-2-2).
 
 앞으로 입력할 자료의 처리 경로를 직접 정하는 한 가지 방법은 모델의 가중치를 받아 실행하는 것이다. 이 선택으로 이미 만들어진 모델의 학습 자료나 앞선 사건의 경위를 확인할 수는 없다. 사용자는 추론이 일어나는 위치와 새로 입력할 자료의 저장 방식을 정할 수 있는 대신, 모델을 배포하고 계속 운영하는 일도 맡는다. 개인에 맞춘 도구를 팀이 함께 쓰려면 대화와 기억의 공유 범위, 사람마다 다른 접근 권한, AI에 허용할 행동까지 결정해야 한다. 이 절은 직접 운영이 개인과 조직에 만드는 권한과 책임을 이런 문제와 함께 살펴본다. 모델 유형 자체의 비교는 §5.3에서 다룬다.
@@ -174,6 +199,12 @@
 오픈 웨이트는 모델을 실행하고 수정할 선택지를 준다. 그 선택을 실제 자율성으로 만들려면 라이선스의 허용 범위를 이해하고 데이터 경계를 확인하며, 배포 이후의 품질과 보안을 계속 책임질 수 있어야 한다.
 
 직접 운영에서 정한 자료·행동 경계는 에디터와 원격 실행 환경을 연결할 때에도 유지되어야 한다. 이러한 개발 환경의 변화를 §17.3에서 다룬다.
+
+```{=typst}
+]
+```
+
+::::
 
 ## 참고 자료 {.unnumbered}
 

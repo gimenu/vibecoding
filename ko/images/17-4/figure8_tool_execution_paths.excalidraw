@@ -37,7 +37,7 @@
       "id": "f8-text-0",
       "type": "text",
       "x": 79.8,
-      "y": 24.75,
+      "y": 14.75,
       "width": 140.4,
       "height": 32.5,
       "angle": 0,
@@ -71,12 +71,12 @@
       "verticalAlign": "top"
     },
     {
-      "id": "f8-line-2",
+      "id": "f8-공유할 원본",
       "type": "line",
-      "x": 14.999999999999991,
-      "y": 77.00000000000003,
-      "width": 270,
-      "height": 0,
+      "x": 10,
+      "y": 70,
+      "width": 280,
+      "height": 220.00000000000003,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -85,7 +85,9 @@
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-공유할 원본-group"
+      ],
       "index": "a2",
       "isDeleted": false,
       "lastCommittedPoint": null,
@@ -98,7 +100,19 @@
           0
         ],
         [
-          270,
+          280,
+          0
+        ],
+        [
+          280,
+          220.00000000000003
+        ],
+        [
+          0,
+          220.00000000000003
+        ],
+        [
+          0,
           0
         ]
       ],
@@ -107,9 +121,9 @@
       "seed": 1002,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#D8DEE4",
+      "strokeColor": "#666C72",
       "strokeStyle": "solid",
-      "strokeWidth": 1,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1002
@@ -118,7 +132,7 @@
       "id": "f8-text-1",
       "type": "text",
       "x": 61.599999999999994,
-      "y": 129.25,
+      "y": 131.25,
       "width": 176.8,
       "height": 32.5,
       "angle": 0,
@@ -130,7 +144,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-공유할 원본-group"
+      ],
       "index": "a3",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -155,7 +171,7 @@
       "id": "f8-text-2",
       "type": "text",
       "x": 48.599999999999994,
-      "y": 161.75,
+      "y": 163.75,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -167,7 +183,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-공유할 원본-group"
+      ],
       "index": "a4",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -192,7 +210,7 @@
       "id": "f8-text-3",
       "type": "text",
       "x": 92.8,
-      "y": 194.25,
+      "y": 196.25,
       "width": 114.4,
       "height": 32.5,
       "angle": 0,
@@ -204,7 +222,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-공유할 원본-group"
+      ],
       "index": "a5",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -229,7 +249,7 @@
       "id": "f8-text-4",
       "type": "text",
       "x": 411.6,
-      "y": 24.75,
+      "y": 14.75,
       "width": 176.8,
       "height": 32.5,
       "angle": 0,
@@ -263,12 +283,12 @@
       "verticalAlign": "top"
     },
     {
-      "id": "f8-line-7",
+      "id": "f8-새 환경의 설정",
       "type": "line",
-      "x": 365,
-      "y": 77.00000000000003,
-      "width": 270,
-      "height": 0,
+      "x": 360,
+      "y": 70,
+      "width": 280,
+      "height": 220.00000000000003,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -277,7 +297,9 @@
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-새 환경의 설정-group"
+      ],
       "index": "a7",
       "isDeleted": false,
       "lastCommittedPoint": null,
@@ -290,7 +312,19 @@
           0
         ],
         [
-          270,
+          280,
+          0
+        ],
+        [
+          280,
+          220.00000000000003
+        ],
+        [
+          0,
+          220.00000000000003
+        ],
+        [
+          0,
           0
         ]
       ],
@@ -299,9 +333,9 @@
       "seed": 1007,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#D8DEE4",
+      "strokeColor": "#666C72",
       "strokeStyle": "solid",
-      "strokeWidth": 1,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1007
@@ -310,7 +344,7 @@
       "id": "f8-text-5",
       "type": "text",
       "x": 403.8,
-      "y": 129.25,
+      "y": 131.25,
       "width": 192.4,
       "height": 32.5,
       "angle": 0,
@@ -322,7 +356,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-새 환경의 설정-group"
+      ],
       "index": "a8",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -347,7 +383,7 @@
       "id": "f8-text-6",
       "type": "text",
       "x": 398.6,
-      "y": 161.75,
+      "y": 163.75,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -359,7 +395,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-새 환경의 설정-group"
+      ],
       "index": "a9",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -384,7 +422,7 @@
       "id": "f8-text-7",
       "type": "text",
       "x": 393.4,
-      "y": 194.25,
+      "y": 196.25,
       "width": 213.2,
       "height": 32.5,
       "angle": 0,
@@ -396,7 +434,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-새 환경의 설정-group"
+      ],
       "index": "aA",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -421,7 +461,7 @@
       "id": "f8-text-8",
       "type": "text",
       "x": 792.8,
-      "y": 24.75,
+      "y": 14.75,
       "width": 114.4,
       "height": 32.5,
       "angle": 0,
@@ -455,12 +495,12 @@
       "verticalAlign": "top"
     },
     {
-      "id": "f8-line-12",
+      "id": "f8-남길 기록",
       "type": "line",
-      "x": 715,
-      "y": 77.00000000000003,
-      "width": 270,
-      "height": 0,
+      "x": 710,
+      "y": 70,
+      "width": 280,
+      "height": 220.00000000000003,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -469,7 +509,9 @@
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-남길 기록-group"
+      ],
       "index": "aC",
       "isDeleted": false,
       "lastCommittedPoint": null,
@@ -482,7 +524,19 @@
           0
         ],
         [
-          270,
+          280,
+          0
+        ],
+        [
+          280,
+          220.00000000000003
+        ],
+        [
+          0,
+          220.00000000000003
+        ],
+        [
+          0,
           0
         ]
       ],
@@ -491,9 +545,9 @@
       "seed": 1012,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#D8DEE4",
+      "strokeColor": "#666C72",
       "strokeStyle": "solid",
-      "strokeWidth": 1,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1012
@@ -502,7 +556,7 @@
       "id": "f8-text-9",
       "type": "text",
       "x": 748.6,
-      "y": 129.25,
+      "y": 131.25,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -514,7 +568,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-남길 기록-group"
+      ],
       "index": "aD",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -539,7 +595,7 @@
       "id": "f8-text-10",
       "type": "text",
       "x": 727.05,
-      "y": 161.75,
+      "y": 163.75,
       "width": 245.9,
       "height": 32.5,
       "angle": 0,
@@ -551,7 +607,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-남길 기록-group"
+      ],
       "index": "aE",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -576,7 +634,7 @@
       "id": "f8-text-11",
       "type": "text",
       "x": 748.6,
-      "y": 194.25,
+      "y": 196.25,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -588,7 +646,9 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f8-남길 기록-group"
+      ],
       "index": "aF",
       "isDeleted": false,
       "lineHeight": 1.25,
@@ -613,7 +673,7 @@
       "id": "f8-text-12",
       "type": "text",
       "x": 315.65,
-      "y": 156.75,
+      "y": 158.75,
       "width": 18.7,
       "height": 42.5,
       "angle": 0,
@@ -650,7 +710,7 @@
       "id": "f8-arrow-17",
       "type": "arrow",
       "x": 649,
-      "y": 178,
+      "y": 180,
       "width": 50,
       "height": 0,
       "angle": 0,

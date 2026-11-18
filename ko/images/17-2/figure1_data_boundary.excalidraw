@@ -34,12 +34,12 @@
       "versionNonce": 1000
     },
     {
-      "id": "f3-line-1",
+      "id": "f3-org",
       "type": "line",
       "x": 250,
-      "y": 215,
-      "width": 735,
-      "height": 198,
+      "y": 20,
+      "width": 740,
+      "height": 200,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -63,16 +63,16 @@
           0
         ],
         [
-          735,
+          740,
           0
         ],
         [
-          735,
-          -198
+          740,
+          200
         ],
         [
           0,
-          -198
+          200
         ],
         [
           0,
@@ -84,9 +84,9 @@
       "seed": 1001,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#727A82",
+      "strokeColor": "#666C72",
       "strokeStyle": "dashed",
-      "strokeWidth": 1.5,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1001
@@ -94,8 +94,8 @@
     {
       "id": "f3-text-0",
       "type": "text",
-      "x": 273,
-      "y": 25.75,
+      "x": 270,
+      "y": 29.75,
       "width": 254.8,
       "height": 32.5,
       "angle": 0,
@@ -129,10 +129,68 @@
       "verticalAlign": "top"
     },
     {
+      "id": "f3-s0",
+      "type": "line",
+      "x": 10,
+      "y": 65,
+      "width": 225,
+      "height": 140,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-s0-group"
+      ],
+      "index": "a3",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          225,
+          0
+        ],
+        [
+          225,
+          140
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1003,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1003
+    },
+    {
       "id": "f3-text-1",
       "type": "text",
       "x": 77.30000000000001,
-      "y": 74.75,
+      "y": 76.75,
       "width": 90.4,
       "height": 32.5,
       "angle": 0,
@@ -144,8 +202,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a3",
+      "groupIds": [
+        "f3-s0-group"
+      ],
+      "index": "a4",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -154,7 +214,7 @@
       "originalText": "A  요청",
       "roughness": 1,
       "roundness": null,
-      "seed": 1003,
+      "seed": 1004,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -162,14 +222,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1003,
+      "versionNonce": 1004,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-2",
       "type": "text",
       "x": 52.30000000000001,
-      "y": 120.5,
+      "y": 119.50000000000003,
       "width": 140.4,
       "height": 32.5,
       "angle": 0,
@@ -181,8 +241,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a4",
+      "groupIds": [
+        "f3-s0-group"
+      ],
+      "index": "a5",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -191,7 +253,7 @@
       "originalText": "질문과 계정",
       "roughness": 1,
       "roundness": null,
-      "seed": 1004,
+      "seed": 1005,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -199,14 +261,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1004,
+      "versionNonce": 1005,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-3",
       "type": "text",
       "x": 65.30000000000001,
-      "y": 153,
+      "y": 152.00000000000003,
       "width": 114.4,
       "height": 32.5,
       "angle": 0,
@@ -218,8 +280,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a5",
+      "groupIds": [
+        "f3-s0-group"
+      ],
+      "index": "a6",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -228,7 +292,7 @@
       "originalText": "세션 정보",
       "roughness": 1,
       "roundness": null,
-      "seed": 1005,
+      "seed": 1006,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -236,15 +300,15 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1005,
+      "versionNonce": 1006,
       "verticalAlign": "top"
     },
     {
-      "id": "f3-arrow-6",
+      "id": "f3-arrow-7",
       "type": "arrow",
-      "x": 233,
-      "y": 138,
-      "width": 25,
+      "x": 237,
+      "y": 130,
+      "width": 19,
       "height": 0,
       "angle": 0,
       "backgroundColor": "transparent",
@@ -255,7 +319,7 @@
       "fillStyle": "solid",
       "frameId": null,
       "groupIds": [],
-      "index": "a6",
+      "index": "a7",
       "isDeleted": false,
       "lastCommittedPoint": null,
       "link": null,
@@ -267,13 +331,13 @@
           0
         ],
         [
-          25,
+          19,
           0
         ]
       ],
       "roughness": 1,
       "roundness": null,
-      "seed": 1006,
+      "seed": 1007,
       "startArrowhead": null,
       "startBinding": null,
       "strokeColor": "#272727",
@@ -281,13 +345,71 @@
       "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
-      "versionNonce": 1006
+      "versionNonce": 1007
+    },
+    {
+      "id": "f3-s1",
+      "type": "line",
+      "x": 260,
+      "y": 65,
+      "width": 225,
+      "height": 140,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-s1-group"
+      ],
+      "index": "a8",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          225,
+          0
+        ],
+        [
+          225,
+          140
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1008,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1008
     },
     {
       "id": "f3-text-4",
       "type": "text",
       "x": 295,
-      "y": 74.75,
+      "y": 76.75,
       "width": 155,
       "height": 32.5,
       "angle": 0,
@@ -299,8 +421,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a7",
+      "groupIds": [
+        "f3-s1-group"
+      ],
+      "index": "a9",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -309,7 +433,7 @@
       "originalText": "B  권한 확인",
       "roughness": 1,
       "roundness": null,
-      "seed": 1007,
+      "seed": 1009,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -317,14 +441,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1007,
+      "versionNonce": 1009,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-5",
       "type": "text",
       "x": 302.3,
-      "y": 120.5,
+      "y": 119.50000000000003,
       "width": 140.4,
       "height": 32.5,
       "angle": 0,
@@ -336,8 +460,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a8",
+      "groupIds": [
+        "f3-s1-group"
+      ],
+      "index": "aA",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -346,7 +472,7 @@
       "originalText": "요청자 신원",
       "roughness": 1,
       "roundness": null,
-      "seed": 1008,
+      "seed": 1010,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -354,14 +480,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1008,
+      "versionNonce": 1010,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-6",
       "type": "text",
       "x": 284.1,
-      "y": 153,
+      "y": 152.00000000000003,
       "width": 176.8,
       "height": 32.5,
       "angle": 0,
@@ -373,8 +499,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a9",
+      "groupIds": [
+        "f3-s1-group"
+      ],
+      "index": "aB",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -383,7 +511,7 @@
       "originalText": "자료 접근 범위",
       "roughness": 1,
       "roundness": null,
-      "seed": 1009,
+      "seed": 1011,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -391,15 +519,15 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1009,
+      "versionNonce": 1011,
       "verticalAlign": "top"
     },
     {
-      "id": "f3-arrow-10",
+      "id": "f3-arrow-12",
       "type": "arrow",
-      "x": 483,
-      "y": 138,
-      "width": 25,
+      "x": 487,
+      "y": 130,
+      "width": 19.000000000000057,
       "height": 0,
       "angle": 0,
       "backgroundColor": "transparent",
@@ -410,7 +538,7 @@
       "fillStyle": "solid",
       "frameId": null,
       "groupIds": [],
-      "index": "aA",
+      "index": "aC",
       "isDeleted": false,
       "lastCommittedPoint": null,
       "link": null,
@@ -422,13 +550,13 @@
           0
         ],
         [
-          25,
+          19.000000000000057,
           0
         ]
       ],
       "roughness": 1,
       "roundness": null,
-      "seed": 1010,
+      "seed": 1012,
       "startArrowhead": null,
       "startBinding": null,
       "strokeColor": "#272727",
@@ -436,13 +564,71 @@
       "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
-      "versionNonce": 1010
+      "versionNonce": 1012
+    },
+    {
+      "id": "f3-s2",
+      "type": "line",
+      "x": 509.99999999999994,
+      "y": 65,
+      "width": 225,
+      "height": 140,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-s2-group"
+      ],
+      "index": "aD",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          225,
+          0
+        ],
+        [
+          225,
+          140
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1013,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1013
     },
     {
       "id": "f3-text-7",
       "type": "text",
       "x": 577.9,
-      "y": 74.75,
+      "y": 76.75,
       "width": 89.2,
       "height": 32.5,
       "angle": 0,
@@ -454,8 +640,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aB",
+      "groupIds": [
+        "f3-s2-group"
+      ],
+      "index": "aE",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -464,7 +652,7 @@
       "originalText": "C  검색",
       "roughness": 1,
       "roundness": null,
-      "seed": 1011,
+      "seed": 1014,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -472,14 +660,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1011,
+      "versionNonce": 1014,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-8",
       "type": "text",
       "x": 552.3,
-      "y": 120.5,
+      "y": 119.50000000000003,
       "width": 140.4,
       "height": 32.5,
       "angle": 0,
@@ -491,8 +679,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aC",
+      "groupIds": [
+        "f3-s2-group"
+      ],
+      "index": "aF",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -501,7 +691,7 @@
       "originalText": "허용된 파일",
       "roughness": 1,
       "roundness": null,
-      "seed": 1012,
+      "seed": 1015,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -509,14 +699,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1012,
+      "versionNonce": 1015,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-9",
       "type": "text",
       "x": 565.3,
-      "y": 153,
+      "y": 152.00000000000003,
       "width": 114.4,
       "height": 32.5,
       "angle": 0,
@@ -528,8 +718,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aD",
+      "groupIds": [
+        "f3-s2-group"
+      ],
+      "index": "aG",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -538,7 +730,7 @@
       "originalText": "권한 캐시",
       "roughness": 1,
       "roundness": null,
-      "seed": 1013,
+      "seed": 1016,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -546,15 +738,15 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1013,
+      "versionNonce": 1016,
       "verticalAlign": "top"
     },
     {
-      "id": "f3-arrow-14",
+      "id": "f3-arrow-17",
       "type": "arrow",
-      "x": 733,
-      "y": 138,
-      "width": 25,
+      "x": 736.9999999999999,
+      "y": 130,
+      "width": 19.000000000000114,
       "height": 0,
       "angle": 0,
       "backgroundColor": "transparent",
@@ -565,7 +757,7 @@
       "fillStyle": "solid",
       "frameId": null,
       "groupIds": [],
-      "index": "aE",
+      "index": "aH",
       "isDeleted": false,
       "lastCommittedPoint": null,
       "link": null,
@@ -577,13 +769,13 @@
           0
         ],
         [
-          25,
+          19.000000000000114,
           0
         ]
       ],
       "roughness": 1,
       "roundness": null,
-      "seed": 1014,
+      "seed": 1017,
       "startArrowhead": null,
       "startBinding": null,
       "strokeColor": "#272727",
@@ -591,126 +783,15 @@
       "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
-      "versionNonce": 1014
+      "versionNonce": 1017
     },
     {
-      "id": "f3-text-10",
-      "type": "text",
-      "x": 781.8,
-      "y": 74.75,
-      "width": 181.4,
-      "height": 32.5,
-      "angle": 0,
-      "autoResize": false,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "containerId": null,
-      "fillStyle": "solid",
-      "fontFamily": 5,
-      "fontSize": 26,
-      "frameId": null,
-      "groupIds": [],
-      "index": "aF",
-      "isDeleted": false,
-      "lineHeight": 1.25,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "originalText": "D  추론과 답변",
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1015,
-      "strokeColor": "#0F4D92",
-      "strokeStyle": "solid",
-      "strokeWidth": 1.8,
-      "text": "D  추론과 답변",
-      "textAlign": "left",
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1015,
-      "verticalAlign": "top"
-    },
-    {
-      "id": "f3-text-11",
-      "type": "text",
-      "x": 815.3,
-      "y": 120.5,
-      "width": 114.4,
-      "height": 32.5,
-      "angle": 0,
-      "autoResize": false,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "containerId": null,
-      "fillStyle": "solid",
-      "fontFamily": 5,
-      "fontSize": 26,
-      "frameId": null,
-      "groupIds": [],
-      "index": "aG",
-      "isDeleted": false,
-      "lineHeight": 1.25,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "originalText": "입력 처리",
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1016,
-      "strokeColor": "#272727",
-      "strokeStyle": "solid",
-      "strokeWidth": 1.8,
-      "text": "입력 처리",
-      "textAlign": "left",
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1016,
-      "verticalAlign": "top"
-    },
-    {
-      "id": "f3-text-12",
-      "type": "text",
-      "x": 815.3,
-      "y": 153,
-      "width": 114.4,
-      "height": 32.5,
-      "angle": 0,
-      "autoResize": false,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "containerId": null,
-      "fillStyle": "solid",
-      "fontFamily": 5,
-      "fontSize": 26,
-      "frameId": null,
-      "groupIds": [],
-      "index": "aH",
-      "isDeleted": false,
-      "lineHeight": 1.25,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "originalText": "출처 확인",
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1017,
-      "strokeColor": "#272727",
-      "strokeStyle": "solid",
-      "strokeWidth": 1.8,
-      "text": "출처 확인",
-      "textAlign": "left",
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1017,
-      "verticalAlign": "top"
-    },
-    {
-      "id": "f3-line-18",
+      "id": "f3-s3",
       "type": "line",
-      "x": 12,
-      "y": 239,
-      "width": 972,
-      "height": 0,
+      "x": 760,
+      "y": 65,
+      "width": 225,
+      "height": 140,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -719,7 +800,9 @@
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f3-s3-group"
+      ],
       "index": "aI",
       "isDeleted": false,
       "lastCommittedPoint": null,
@@ -732,7 +815,19 @@
           0
         ],
         [
-          972,
+          225,
+          0
+        ],
+        [
+          225,
+          140
+        ],
+        [
+          0,
+          140
+        ],
+        [
+          0,
           0
         ]
       ],
@@ -741,18 +836,193 @@
       "seed": 1018,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#D8DEE4",
+      "strokeColor": "#666C72",
       "strokeStyle": "solid",
-      "strokeWidth": 1,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1018
     },
     {
+      "id": "f3-text-10",
+      "type": "text",
+      "x": 781.8,
+      "y": 76.75,
+      "width": 181.4,
+      "height": 32.5,
+      "angle": 0,
+      "autoResize": false,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "containerId": null,
+      "fillStyle": "solid",
+      "fontFamily": 5,
+      "fontSize": 26,
+      "frameId": null,
+      "groupIds": [
+        "f3-s3-group"
+      ],
+      "index": "aJ",
+      "isDeleted": false,
+      "lineHeight": 1.25,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "originalText": "D  추론과 답변",
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1019,
+      "strokeColor": "#0F4D92",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "text": "D  추론과 답변",
+      "textAlign": "left",
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1019,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "f3-text-11",
+      "type": "text",
+      "x": 815.3,
+      "y": 119.50000000000003,
+      "width": 114.4,
+      "height": 32.5,
+      "angle": 0,
+      "autoResize": false,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "containerId": null,
+      "fillStyle": "solid",
+      "fontFamily": 5,
+      "fontSize": 26,
+      "frameId": null,
+      "groupIds": [
+        "f3-s3-group"
+      ],
+      "index": "aK",
+      "isDeleted": false,
+      "lineHeight": 1.25,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "originalText": "입력 처리",
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1020,
+      "strokeColor": "#272727",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "text": "입력 처리",
+      "textAlign": "left",
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1020,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "f3-text-12",
+      "type": "text",
+      "x": 815.3,
+      "y": 152.00000000000003,
+      "width": 114.4,
+      "height": 32.5,
+      "angle": 0,
+      "autoResize": false,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "containerId": null,
+      "fillStyle": "solid",
+      "fontFamily": 5,
+      "fontSize": 26,
+      "frameId": null,
+      "groupIds": [
+        "f3-s3-group"
+      ],
+      "index": "aL",
+      "isDeleted": false,
+      "lineHeight": 1.25,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "originalText": "출처 확인",
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1021,
+      "strokeColor": "#272727",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "text": "출처 확인",
+      "textAlign": "left",
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1021,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "f3-store1",
+      "type": "line",
+      "x": 10,
+      "y": 240,
+      "width": 305,
+      "height": 100,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-store1-group"
+      ],
+      "index": "aM",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          305,
+          0
+        ],
+        [
+          305,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1022,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1022
+    },
+    {
       "id": "f3-text-13",
       "type": "text",
-      "x": 63.599999999999994,
-      "y": 255.75,
+      "x": 61.099999999999994,
+      "y": 252.75,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -764,8 +1034,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aJ",
+      "groupIds": [
+        "f3-store1-group"
+      ],
+      "index": "aN",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -774,7 +1046,7 @@
       "originalText": "검색 색인과 캐시",
       "roughness": 1,
       "roundness": null,
-      "seed": 1019,
+      "seed": 1023,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -782,14 +1054,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1019,
+      "versionNonce": 1023,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-14",
       "type": "text",
-      "x": 32.900000000000006,
-      "y": 301.75,
+      "x": 30.400000000000006,
+      "y": 296.75,
       "width": 264.2,
       "height": 32.5,
       "angle": 0,
@@ -801,8 +1073,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aK",
+      "groupIds": [
+        "f3-store1-group"
+      ],
+      "index": "aO",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -811,7 +1085,7 @@
       "originalText": "파일 조각 / 권한 갱신",
       "roughness": 1,
       "roundness": null,
-      "seed": 1020,
+      "seed": 1024,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -819,14 +1093,72 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1020,
+      "versionNonce": 1024,
       "verticalAlign": "top"
+    },
+    {
+      "id": "f3-store2",
+      "type": "line",
+      "x": 345,
+      "y": 240,
+      "width": 305,
+      "height": 100,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-store2-group"
+      ],
+      "index": "aP",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          305,
+          0
+        ],
+        [
+          305,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1025,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1025
     },
     {
       "id": "f3-text-15",
       "type": "text",
-      "x": 398.6,
-      "y": 255.75,
+      "x": 396.0999999999999,
+      "y": 252.75,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -838,8 +1170,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aL",
+      "groupIds": [
+        "f3-store2-group"
+      ],
+      "index": "aQ",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -848,7 +1182,7 @@
       "originalText": "대화와 오류 로그",
       "roughness": 1,
       "roundness": null,
-      "seed": 1021,
+      "seed": 1026,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -856,14 +1190,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1021,
+      "versionNonce": 1026,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-16",
       "type": "text",
-      "x": 386.6,
-      "y": 301.75,
+      "x": 384.0999999999999,
+      "y": 296.75,
       "width": 226.8,
       "height": 32.5,
       "angle": 0,
@@ -875,8 +1209,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aM",
+      "groupIds": [
+        "f3-store2-group"
+      ],
+      "index": "aR",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -885,7 +1221,7 @@
       "originalText": "보관 / 열람 / 삭제",
       "roughness": 1,
       "roundness": null,
-      "seed": 1022,
+      "seed": 1027,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -893,14 +1229,72 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1022,
+      "versionNonce": 1027,
       "verticalAlign": "top"
+    },
+    {
+      "id": "f3-store3",
+      "type": "line",
+      "x": 680,
+      "y": 240,
+      "width": 305,
+      "height": 100,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f3-store3-group"
+      ],
+      "index": "aS",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          305,
+          0
+        ],
+        [
+          305,
+          100
+        ],
+        [
+          0,
+          100
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1028,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1028
     },
     {
       "id": "f3-text-17",
       "type": "text",
-      "x": 720.6,
-      "y": 255.75,
+      "x": 718.0999999999999,
+      "y": 252.75,
       "width": 228.8,
       "height": 32.5,
       "angle": 0,
@@ -912,8 +1306,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aN",
+      "groupIds": [
+        "f3-store3-group"
+      ],
+      "index": "aT",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -922,7 +1318,7 @@
       "originalText": "백업과 연결 서비스",
       "roughness": 1,
       "roundness": null,
-      "seed": 1023,
+      "seed": 1029,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -930,14 +1326,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1023,
+      "versionNonce": 1029,
       "verticalAlign": "top"
     },
     {
       "id": "f3-text-18",
       "type": "text",
-      "x": 734.1,
-      "y": 301.75,
+      "x": 731.5999999999999,
+      "y": 296.75,
       "width": 201.8,
       "height": 32.5,
       "angle": 0,
@@ -949,8 +1345,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aO",
+      "groupIds": [
+        "f3-store3-group"
+      ],
+      "index": "aU",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -959,7 +1357,7 @@
       "originalText": "보관 / 외부 전송",
       "roughness": 1,
       "roundness": null,
-      "seed": 1024,
+      "seed": 1030,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -967,7 +1365,7 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1024,
+      "versionNonce": 1030,
       "verticalAlign": "top"
     }
   ],

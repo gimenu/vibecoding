@@ -1059,6 +1059,94 @@
       "version": 1,
       "versionNonce": 1027,
       "verticalAlign": "top"
+    },
+    {
+      "id": "f6-column-rule-0",
+      "type": "line",
+      "x": 215,
+      "y": 10,
+      "width": 0,
+      "height": 445,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [],
+      "index": "aS",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          445
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 7060,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#A6ABB0",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.1,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 7060
+    },
+    {
+      "id": "f6-column-rule-1",
+      "type": "line",
+      "x": 565,
+      "y": 10,
+      "width": 0,
+      "height": 445,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [],
+      "index": "aT",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          445
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 7061,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#A6ABB0",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.1,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 7061
     }
   ],
   "appState": {

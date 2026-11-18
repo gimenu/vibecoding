@@ -34,12 +34,12 @@
       "versionNonce": 1000
     },
     {
-      "id": "f7-line-1",
+      "id": "f7-original",
       "type": "line",
-      "x": 12,
-      "y": 76,
-      "width": 941.9999999999999,
-      "height": 59,
+      "x": 10,
+      "y": 15,
+      "width": 950,
+      "height": 65,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -63,16 +63,16 @@
           0
         ],
         [
-          941.9999999999999,
+          950,
           0
         ],
         [
-          941.9999999999999,
-          -59
+          950,
+          65
         ],
         [
           0,
-          -59
+          65
         ],
         [
           0,
@@ -84,9 +84,9 @@
       "seed": 1001,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#727A82",
+      "strokeColor": "#666C72",
       "strokeStyle": "solid",
-      "strokeWidth": 1.5,
+      "strokeWidth": 1.8,
       "updated": 1,
       "version": 1,
       "versionNonce": 1001
@@ -94,8 +94,8 @@
     {
       "id": "f7-text-0",
       "type": "text",
-      "x": 197.64999999999998,
-      "y": 30.25,
+      "x": 199.64999999999992,
+      "y": 31.25,
       "width": 570.7,
       "height": 32.5,
       "angle": 0,
@@ -131,10 +131,68 @@
       "verticalAlign": "top"
     },
     {
+      "id": "f7-research",
+      "type": "line",
+      "x": 10,
+      "y": 132,
+      "width": 290,
+      "height": 135,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f7-research-group"
+      ],
+      "index": "a3",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          290,
+          0
+        ],
+        [
+          290,
+          135
+        ],
+        [
+          0,
+          135
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1003,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1003
+    },
+    {
       "id": "f7-text-1",
       "type": "text",
       "x": 106.3,
-      "y": 137.5,
+      "y": 144.5,
       "width": 97.4,
       "height": 35,
       "angle": 0,
@@ -146,8 +204,10 @@
       "fontFamily": 5,
       "fontSize": 28,
       "frameId": null,
-      "groupIds": [],
-      "index": "a3",
+      "groupIds": [
+        "f7-research-group"
+      ],
+      "index": "a4",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -156,7 +216,7 @@
       "originalText": "A  조사",
       "roughness": 1,
       "roundness": null,
-      "seed": 1003,
+      "seed": 1004,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -164,14 +224,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1003,
+      "versionNonce": 1004,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-2",
       "type": "text",
       "x": 53.599999999999994,
-      "y": 186.5,
+      "y": 191.5,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -183,8 +243,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a4",
+      "groupIds": [
+        "f7-research-group"
+      ],
+      "index": "a5",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -193,7 +255,7 @@
       "originalText": "원인과 재현 근거",
       "roughness": 1,
       "roundness": null,
-      "seed": 1004,
+      "seed": 1005,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -201,14 +263,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1004,
+      "versionNonce": 1005,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-3",
       "type": "text",
       "x": 53.599999999999994,
-      "y": 219,
+      "y": 224,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -220,8 +282,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a5",
+      "groupIds": [
+        "f7-research-group"
+      ],
+      "index": "a6",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -230,7 +294,7 @@
       "originalText": "기준 기록에 반영",
       "roughness": 1,
       "roundness": null,
-      "seed": 1005,
+      "seed": 1006,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -238,14 +302,72 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1005,
+      "versionNonce": 1006,
       "verticalAlign": "top"
+    },
+    {
+      "id": "f7-implement",
+      "type": "line",
+      "x": 335,
+      "y": 132,
+      "width": 290,
+      "height": 135,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f7-implement-group"
+      ],
+      "index": "a7",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          290,
+          0
+        ],
+        [
+          290,
+          135
+        ],
+        [
+          0,
+          135
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1007,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1007
     },
     {
       "id": "f7-text-4",
       "type": "text",
       "x": 430.15,
-      "y": 137.5,
+      "y": 144.5,
       "width": 99.7,
       "height": 35,
       "angle": 0,
@@ -257,8 +379,10 @@
       "fontFamily": 5,
       "fontSize": 28,
       "frameId": null,
-      "groupIds": [],
-      "index": "a6",
+      "groupIds": [
+        "f7-implement-group"
+      ],
+      "index": "a8",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -267,7 +391,7 @@
       "originalText": "B  구현",
       "roughness": 1,
       "roundness": null,
-      "seed": 1006,
+      "seed": 1008,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -275,14 +399,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1006,
+      "versionNonce": 1008,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-5",
       "type": "text",
       "x": 378.6,
-      "y": 186.5,
+      "y": 191.5,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -294,8 +418,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a7",
+      "groupIds": [
+        "f7-implement-group"
+      ],
+      "index": "a9",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -304,7 +430,7 @@
       "originalText": "갱신된 기록 확인",
       "roughness": 1,
       "roundness": null,
-      "seed": 1007,
+      "seed": 1009,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -312,14 +438,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1007,
+      "versionNonce": 1009,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-6",
       "type": "text",
       "x": 365.6,
-      "y": 219,
+      "y": 224,
       "width": 228.8,
       "height": 32.5,
       "angle": 0,
@@ -331,8 +457,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "a8",
+      "groupIds": [
+        "f7-implement-group"
+      ],
+      "index": "aA",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -341,7 +469,7 @@
       "originalText": "코드와 변경 식별자",
       "roughness": 1,
       "roundness": null,
-      "seed": 1008,
+      "seed": 1010,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -349,14 +477,72 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1008,
+      "versionNonce": 1010,
       "verticalAlign": "top"
+    },
+    {
+      "id": "f7-verify",
+      "type": "line",
+      "x": 660,
+      "y": 132,
+      "width": 290,
+      "height": 135,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": null,
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [
+        "f7-verify-group"
+      ],
+      "index": "aB",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          290,
+          0
+        ],
+        [
+          290,
+          135
+        ],
+        [
+          0,
+          135
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1011,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1011
     },
     {
       "id": "f7-text-7",
       "type": "text",
-      "x": 757.0000000000001,
-      "y": 137.5,
+      "x": 756.9999999999999,
+      "y": 144.5,
       "width": 96,
       "height": 35,
       "angle": 0,
@@ -368,8 +554,10 @@
       "fontFamily": 5,
       "fontSize": 28,
       "frameId": null,
-      "groupIds": [],
-      "index": "a9",
+      "groupIds": [
+        "f7-verify-group"
+      ],
+      "index": "aC",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -378,7 +566,7 @@
       "originalText": "C  검증",
       "roughness": 1,
       "roundness": null,
-      "seed": 1009,
+      "seed": 1012,
       "strokeColor": "#0F4D92",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -386,14 +574,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1009,
+      "versionNonce": 1012,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-8",
       "type": "text",
-      "x": 703.6000000000001,
-      "y": 186.5,
+      "x": 703.5999999999999,
+      "y": 191.5,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -405,8 +593,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aA",
+      "groupIds": [
+        "f7-verify-group"
+      ],
+      "index": "aD",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -415,7 +605,7 @@
       "originalText": "변경된 코드 검사",
       "roughness": 1,
       "roundness": null,
-      "seed": 1010,
+      "seed": 1013,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -423,14 +613,14 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1010,
+      "versionNonce": 1013,
       "verticalAlign": "top"
     },
     {
       "id": "f7-text-9",
       "type": "text",
-      "x": 703.6000000000001,
-      "y": 219,
+      "x": 703.5999999999999,
+      "y": 224,
       "width": 202.8,
       "height": 32.5,
       "angle": 0,
@@ -442,8 +632,10 @@
       "fontFamily": 5,
       "fontSize": 26,
       "frameId": null,
-      "groupIds": [],
-      "index": "aB",
+      "groupIds": [
+        "f7-verify-group"
+      ],
+      "index": "aE",
       "isDeleted": false,
       "lineHeight": 1.25,
       "link": null,
@@ -452,7 +644,7 @@
       "originalText": "결과와 남은 문제",
       "roughness": 1,
       "roundness": null,
-      "seed": 1011,
+      "seed": 1014,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 1.8,
@@ -460,153 +652,21 @@
       "textAlign": "left",
       "updated": 1,
       "version": 1,
-      "versionNonce": 1011,
+      "versionNonce": 1014,
       "verticalAlign": "top"
     },
     {
-      "id": "f7-arrow-12",
+      "id": "f7-arrow-15",
       "type": "arrow",
       "x": 155,
-      "y": 82,
+      "y": 86,
       "width": 0,
-      "height": 44,
+      "height": 40.99999999999997,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
       "elbowed": false,
       "endArrowhead": "arrow",
-      "endBinding": null,
-      "fillStyle": "solid",
-      "frameId": null,
-      "groupIds": [],
-      "index": "aC",
-      "isDeleted": false,
-      "lastCommittedPoint": null,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          0,
-          44
-        ]
-      ],
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1012,
-      "startArrowhead": null,
-      "startBinding": null,
-      "strokeColor": "#272727",
-      "strokeStyle": "solid",
-      "strokeWidth": 2.2,
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1012
-    },
-    {
-      "id": "f7-arrow-13",
-      "type": "arrow",
-      "x": 304,
-      "y": 194,
-      "width": 26,
-      "height": 0,
-      "angle": 0,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "elbowed": false,
-      "endArrowhead": "arrow",
-      "endBinding": null,
-      "fillStyle": "solid",
-      "frameId": null,
-      "groupIds": [],
-      "index": "aD",
-      "isDeleted": false,
-      "lastCommittedPoint": null,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          26,
-          0
-        ]
-      ],
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1013,
-      "startArrowhead": null,
-      "startBinding": null,
-      "strokeColor": "#272727",
-      "strokeStyle": "solid",
-      "strokeWidth": 2.2,
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1013
-    },
-    {
-      "id": "f7-arrow-14",
-      "type": "arrow",
-      "x": 629,
-      "y": 194,
-      "width": 26,
-      "height": 0,
-      "angle": 0,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "elbowed": false,
-      "endArrowhead": "arrow",
-      "endBinding": null,
-      "fillStyle": "solid",
-      "frameId": null,
-      "groupIds": [],
-      "index": "aE",
-      "isDeleted": false,
-      "lastCommittedPoint": null,
-      "link": null,
-      "locked": false,
-      "opacity": 100,
-      "points": [
-        [
-          0,
-          0
-        ],
-        [
-          26,
-          0
-        ]
-      ],
-      "roughness": 1,
-      "roundness": null,
-      "seed": 1014,
-      "startArrowhead": null,
-      "startBinding": null,
-      "strokeColor": "#272727",
-      "strokeStyle": "solid",
-      "strokeWidth": 2.2,
-      "updated": 1,
-      "version": 1,
-      "versionNonce": 1014
-    },
-    {
-      "id": "f7-line-15",
-      "type": "line",
-      "x": 15,
-      "y": 285,
-      "width": 935,
-      "height": 0,
-      "angle": 0,
-      "backgroundColor": "transparent",
-      "boundElements": null,
-      "elbowed": false,
-      "endArrowhead": null,
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
@@ -623,8 +683,8 @@
           0
         ],
         [
-          935,
-          0
+          0,
+          40.99999999999997
         ]
       ],
       "roughness": 1,
@@ -632,57 +692,64 @@
       "seed": 1015,
       "startArrowhead": null,
       "startBinding": null,
-      "strokeColor": "#D8DEE4",
+      "strokeColor": "#272727",
       "strokeStyle": "solid",
-      "strokeWidth": 1,
+      "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
       "versionNonce": 1015
     },
     {
-      "id": "f7-text-10",
-      "type": "text",
-      "x": 262,
-      "y": 313.75,
-      "width": 442,
-      "height": 32.5,
+      "id": "f7-arrow-16",
+      "type": "arrow",
+      "x": 304,
+      "y": 199,
+      "width": 26,
+      "height": 0,
       "angle": 0,
-      "autoResize": false,
       "backgroundColor": "transparent",
       "boundElements": null,
-      "containerId": null,
+      "elbowed": false,
+      "endArrowhead": "arrow",
+      "endBinding": null,
       "fillStyle": "solid",
-      "fontFamily": 5,
-      "fontSize": 26,
       "frameId": null,
       "groupIds": [],
       "index": "aG",
       "isDeleted": false,
-      "lineHeight": 1.25,
+      "lastCommittedPoint": null,
       "link": null,
       "locked": false,
       "opacity": 100,
-      "originalText": "사람이 검토한 변경과 검사 근거 보관",
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          26,
+          0
+        ]
+      ],
       "roughness": 1,
       "roundness": null,
       "seed": 1016,
+      "startArrowhead": null,
+      "startBinding": null,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
-      "strokeWidth": 1.8,
-      "text": "사람이 검토한 변경과 검사 근거 보관",
-      "textAlign": "left",
+      "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
-      "versionNonce": 1016,
-      "verticalAlign": "top"
+      "versionNonce": 1016
     },
     {
       "id": "f7-arrow-17",
       "type": "arrow",
-      "x": 805.0000000000001,
-      "y": 262,
-      "width": 0,
-      "height": 52,
+      "x": 629,
+      "y": 199,
+      "width": 26,
+      "height": 0,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
@@ -704,8 +771,8 @@
           0
         ],
         [
-          0,
-          52
+          26,
+          0
         ]
       ],
       "roughness": 1,
@@ -721,21 +788,23 @@
       "versionNonce": 1017
     },
     {
-      "id": "f7-arrow-18",
-      "type": "arrow",
-      "x": 935,
-      "y": 330,
-      "width": 51,
-      "height": 283.5,
+      "id": "f7-archive",
+      "type": "line",
+      "x": 10,
+      "y": 300,
+      "width": 950,
+      "height": 55.00000000000001,
       "angle": 0,
       "backgroundColor": "transparent",
       "boundElements": null,
       "elbowed": false,
-      "endArrowhead": "arrow",
+      "endArrowhead": null,
       "endBinding": null,
       "fillStyle": "solid",
       "frameId": null,
-      "groupIds": [],
+      "groupIds": [
+        "f7-archive-group"
+      ],
       "index": "aI",
       "isDeleted": false,
       "lastCommittedPoint": null,
@@ -748,16 +817,20 @@
           0
         ],
         [
-          51,
+          950,
           0
         ],
         [
-          51,
-          -283.5
+          950,
+          55.00000000000001
         ],
         [
-          28.000000000000114,
-          -283.5
+          0,
+          55.00000000000001
+        ],
+        [
+          0,
+          0
         ]
       ],
       "roughness": 1,
@@ -765,12 +838,147 @@
       "seed": 1018,
       "startArrowhead": null,
       "startBinding": null,
+      "strokeColor": "#666C72",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1018
+    },
+    {
+      "id": "f7-text-10",
+      "type": "text",
+      "x": 263.99999999999994,
+      "y": 311.25,
+      "width": 442,
+      "height": 32.5,
+      "angle": 0,
+      "autoResize": false,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "containerId": null,
+      "fillStyle": "solid",
+      "fontFamily": 5,
+      "fontSize": 26,
+      "frameId": null,
+      "groupIds": [
+        "f7-archive-group"
+      ],
+      "index": "aJ",
+      "isDeleted": false,
+      "lineHeight": 1.25,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "originalText": "사람이 검토한 변경과 검사 근거 보관",
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1019,
+      "strokeColor": "#272727",
+      "strokeStyle": "solid",
+      "strokeWidth": 1.8,
+      "text": "사람이 검토한 변경과 검사 근거 보관",
+      "textAlign": "left",
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1019,
+      "verticalAlign": "top"
+    },
+    {
+      "id": "f7-arrow-20",
+      "type": "arrow",
+      "x": 805.0000000000001,
+      "y": 272,
+      "width": 0,
+      "height": 23,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": "arrow",
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [],
+      "index": "aK",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          23
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1020,
+      "startArrowhead": null,
+      "startBinding": null,
       "strokeColor": "#272727",
       "strokeStyle": "solid",
       "strokeWidth": 2.2,
       "updated": 1,
       "version": 1,
-      "versionNonce": 1018
+      "versionNonce": 1020
+    },
+    {
+      "id": "f7-arrow-21",
+      "type": "arrow",
+      "x": 965,
+      "y": 327.5,
+      "width": 25,
+      "height": 280,
+      "angle": 0,
+      "backgroundColor": "transparent",
+      "boundElements": null,
+      "elbowed": false,
+      "endArrowhead": "arrow",
+      "endBinding": null,
+      "fillStyle": "solid",
+      "frameId": null,
+      "groupIds": [],
+      "index": "aL",
+      "isDeleted": false,
+      "lastCommittedPoint": null,
+      "link": null,
+      "locked": false,
+      "opacity": 100,
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          25,
+          0
+        ],
+        [
+          25,
+          -280
+        ],
+        [
+          0,
+          -280
+        ]
+      ],
+      "roughness": 1,
+      "roundness": null,
+      "seed": 1021,
+      "startArrowhead": null,
+      "startBinding": null,
+      "strokeColor": "#272727",
+      "strokeStyle": "solid",
+      "strokeWidth": 2.2,
+      "updated": 1,
+      "version": 1,
+      "versionNonce": 1021
     }
   ],
   "appState": {
