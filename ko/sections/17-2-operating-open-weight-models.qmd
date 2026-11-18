@@ -4,11 +4,15 @@
 
 ```{=html}
 <style>
-.ch17-table-layout table th + th,
-.ch17-table-layout table td + td { border-left: 1px solid #a6a6a6; }
+.ch17-table-layout table { border-collapse: collapse; border: 1px solid #a6a6a6; }
 .ch17-table-layout table th,
-.ch17-table-layout table td { padding: 0.35em 0.5em; vertical-align: top; }
-.ch17-table-layout table td { border-bottom: 0.5px solid #d9d9d9; }
+.ch17-table-layout table td {
+  border: 1px solid #a6a6a6;
+  padding: 0.35em 0.5em;
+  vertical-align: top;
+}
+.ch17-table-layout table thead th { background-color: #f2f2f2; font-weight: 600; }
+.ch17-table-layout table tbody td { background-color: #ffffff; }
 </style>
 ```
 
@@ -18,13 +22,11 @@
 #[
 #set table(
   inset: (x: 4pt, y: 3pt),
-  stroke: (x, y) => (
-    left: if x > 0 { 0.45pt + luma(65%) } else { none },
-    right: none,
-    top: none,
-    bottom: 0.25pt + luma(85%),
-  ),
+  stroke: 0.45pt + luma(65%),
+  fill: (x, y) => if y == 0 { luma(95%) } else { white },
 )
+#set table.hline(stroke: 0.45pt + luma(65%))
+#show table.cell.where(y: 0): set text(weight: "semibold")
 ```
 
 2026년 9월, OpenAI가 나비에–스토크스 문제에 관한 연구 결과를 발표했다. 비슷한 문제를 연구하던 수학자 Tristan Buckmaster는 발표에 앞선 통화에서 자신이 Codex에 입력한 미공개 연구 초안이 OpenAI 모델의 학습이나 결과에 쓰였는지 물었다고 밝혔다. OpenAI는 조사 뒤 발표 전 두 달간의 Buckmaster 프롬프트가 결과에 영향을 줄 수 없었다고 설명했다. Buckmaster 역시 자신의 자료가 실제로 쓰였는지는 모른다고 명시했다. 이 사례는 데이터 유출이 확인된 사건이 아니다. 다만 외부 AI 도구에 자료를 넣은 사람이 그 자료의 처리 경로를 어디까지 알 수 있는지 묻게 한다 [\[1\]](#ref-17-2-1)[\[2\]](#ref-17-2-2).

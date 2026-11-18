@@ -4,11 +4,15 @@
 
 ```{=html}
 <style>
-.ch17-table-layout table th + th,
-.ch17-table-layout table td + td { border-left: 1px solid #a6a6a6; }
+.ch17-table-layout table { border-collapse: collapse; border: 1px solid #a6a6a6; }
 .ch17-table-layout table th,
-.ch17-table-layout table td { padding: 0.35em 0.5em; vertical-align: top; }
-.ch17-table-layout table td { border-bottom: 0.5px solid #d9d9d9; }
+.ch17-table-layout table td {
+  border: 1px solid #a6a6a6;
+  padding: 0.35em 0.5em;
+  vertical-align: top;
+}
+.ch17-table-layout table thead th { background-color: #f2f2f2; font-weight: 600; }
+.ch17-table-layout table tbody td { background-color: #ffffff; }
 </style>
 ```
 
@@ -18,13 +22,11 @@
 #[
 #set table(
   inset: (x: 4pt, y: 3pt),
-  stroke: (x, y) => (
-    left: if x > 0 { 0.45pt + luma(65%) } else { none },
-    right: none,
-    top: none,
-    bottom: 0.25pt + luma(85%),
-  ),
+  stroke: 0.45pt + luma(65%),
+  fill: (x, y) => if y == 0 { luma(95%) } else { white },
 )
+#set table.hline(stroke: 0.45pt + luma(65%))
+#show table.cell.where(y: 0): set text(weight: "semibold")
 ```
 
 온라인 상점의 검색 기능을 개발하면서 조사에는 Claude Code를, 구현에는 Codex를 사용한다고 하자. 구현 담당 에이전트가 작업을 시작하려면 무엇을 고쳐야 하는지, 그리고 앞선 조사에서 무엇을 확인했는지 알아야 한다. 이 내용이 조사 도구의 대화에만 남아 있다면 개발자가 다시 정리해 전달해야 한다. 반면 프로젝트가 요구사항과 조사 결과를 관리하고 각 에이전트가 그 기록을 읽는다면, 같은 정보를 바탕으로 역할을 나누거나 도구를 바꿔 작업을 계속할 수 있다.

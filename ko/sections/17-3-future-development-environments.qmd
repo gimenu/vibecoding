@@ -4,11 +4,15 @@
 
 ```{=html}
 <style>
-.ch17-table-layout table th + th,
-.ch17-table-layout table td + td { border-left: 1px solid #a6a6a6; }
+.ch17-table-layout table { border-collapse: collapse; border: 1px solid #a6a6a6; }
 .ch17-table-layout table th,
-.ch17-table-layout table td { padding: 0.35em 0.5em; vertical-align: top; }
-.ch17-table-layout table td { border-bottom: 0.5px solid #d9d9d9; }
+.ch17-table-layout table td {
+  border: 1px solid #a6a6a6;
+  padding: 0.35em 0.5em;
+  vertical-align: top;
+}
+.ch17-table-layout table thead th { background-color: #f2f2f2; font-weight: 600; }
+.ch17-table-layout table tbody td { background-color: #ffffff; }
 </style>
 ```
 
@@ -18,13 +22,11 @@
 #[
 #set table(
   inset: (x: 4pt, y: 3pt),
-  stroke: (x, y) => (
-    left: if x > 0 { 0.45pt + luma(65%) } else { none },
-    right: none,
-    top: none,
-    bottom: 0.25pt + luma(85%),
-  ),
+  stroke: 0.45pt + luma(65%),
+  fill: (x, y) => if y == 0 { luma(95%) } else { white },
 )
+#set table.hline(stroke: 0.45pt + luma(65%))
+#show table.cell.where(y: 0): set text(weight: "semibold")
 ```
 
 통합 개발 환경(IDE)이 가져온 변화는 오류 메시지 한 줄만 눌러 봐도 알 수 있다. 프로그램을 실행하다 오류가 나면 편집기가 해당 파일의 문제 지점을 열어 준다. 빌드 도구는 여전히 프로그램을 만들고, 편집기는 여전히 파일을 연다. 달라진 것은 개발자가 빌드 결과에서 파일 이름과 줄 번호를 찾아 옮겨 적던 일이 사라졌다는 점이다.

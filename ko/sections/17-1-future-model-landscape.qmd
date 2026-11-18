@@ -4,11 +4,15 @@
 
 ```{=html}
 <style>
-.ch17-table-layout table th + th,
-.ch17-table-layout table td + td { border-left: 1px solid #a6a6a6; }
+.ch17-table-layout table { border-collapse: collapse; border: 1px solid #a6a6a6; }
 .ch17-table-layout table th,
-.ch17-table-layout table td { padding: 0.35em 0.5em; vertical-align: top; }
-.ch17-table-layout table td { border-bottom: 0.5px solid #d9d9d9; }
+.ch17-table-layout table td {
+  border: 1px solid #a6a6a6;
+  padding: 0.35em 0.5em;
+  vertical-align: top;
+}
+.ch17-table-layout table thead th { background-color: #f2f2f2; font-weight: 600; }
+.ch17-table-layout table tbody td { background-color: #ffffff; }
 </style>
 ```
 
@@ -18,13 +22,11 @@
 #[
 #set table(
   inset: (x: 4pt, y: 3pt),
-  stroke: (x, y) => (
-    left: if x > 0 { 0.45pt + luma(65%) } else { none },
-    right: none,
-    top: none,
-    bottom: 0.25pt + luma(85%),
-  ),
+  stroke: 0.45pt + luma(65%),
+  fill: (x, y) => if y == 0 { luma(95%) } else { white },
 )
+#set table.hline(stroke: 0.45pt + luma(65%))
+#show table.cell.where(y: 0): set text(weight: "semibold")
 ```
 
 AI 코딩에 쓸 모델을 이야기할 때 흔히 프런티어, 특화, 온디바이스 모델로 나누지만, 이 세 이름은 서로 다른 기준을 가리킨다. 이 절은 그 기준을 작업 범위, 성능 수준, 실행 위치로 나누어 정리하고, 모델의 변화가 실제 선택지에 어떤 영향을 미치는지 2026년 10월 기준으로 살펴본다.
