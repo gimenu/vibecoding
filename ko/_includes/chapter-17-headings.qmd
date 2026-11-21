@@ -1,0 +1,27 @@
+```{=html}
+<style>
+#quarto-document-content h1,
+#quarto-document-content h2,
+#quarto-document-content h3,
+#quarto-document-content h4 { font-weight: 700; }
+#quarto-document-content h2 { margin-block: 1.35em 0.45em; }
+#quarto-document-content h3 { margin-block: 1.15em 0.4em; }
+#quarto-document-content h4 {
+  font-size: 1.05rem;
+  margin-block: 1em 0.35em;
+}
+</style>
+```
+
+```{=typst}
+#[
+#show heading: set text(font: ("Malgun Gothic", "Noto Sans CJK KR"), weight: "bold")
+#show heading.where(level: 1): set text(size: 18pt)
+#show heading.where(level: 2): set text(size: 14.5pt)
+#show heading.where(level: 3): set text(size: 13pt)
+#show heading.where(level: 4): set text(size: 11.25pt)
+#show heading.where(level: 1): set block(above: 16pt, below: 9pt, sticky: true)
+#show heading.where(level: 2): set block(above: 16pt, below: 7pt, sticky: true)
+#show heading.where(level: 3): set block(above: 13pt, below: 6pt, sticky: true)
+#show heading.where(level: 4): set block(above: 10pt, below: 6pt, sticky: true)
+```
